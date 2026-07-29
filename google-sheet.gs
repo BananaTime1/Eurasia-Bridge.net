@@ -37,6 +37,22 @@ function doPost(e) {
   }
 }
 
-function doGet() {
+function doGet(e) {
+  // ?type=listings  → returns the "Listings" tab as JSON so the site shows your cargo.
+  // Listings tab columns (row 1 = headers): dir | en | ru | hs | origin | moq | barter
+  //   dir = "iran-cis" or "cis-iran";  barter = TRUE/FALSE
+  if (e && e.parameter && e.parameter.type === 'listings') {
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sh = ss.getSheetByName('Listings');
+    if (!sh) return ContentService.createTextOutput('[]').setMimeType(ContentService.MimeType.JSON);
+    var vals = sh.getDataRange().getValues();
+    var head = vals.shift().map(function(h){ return String(h).trim().toLowerCase(); });
+    var out = vals.filter(function(r){ return r.join('').trim() !== ''; }).map(function(r){
+      var o = {}; head.forEach(function(h, i){ o[h] = r[i]; });
+      o.barter = (o.barter === true || String(o.barter).toUpperCase() === 'TRUE');
+      return o;
+    });
+    return ContentService.createTextOutput(JSON.stringify(out)).setMimeType(ContentService.MimeType.JSON);
+  }
   return ContentService.createTextOutput('Eurasia Bridge intake endpoint is live.');
 }

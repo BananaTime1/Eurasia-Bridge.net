@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cargo — Eurasia Bridge</title>
+<meta name="description" content="Cargo available across the Iran–Kazakhstan corridor, both directions — pistachios, saffron, bitumen, polymers, grain, oils, metal, timber, fertilisers and more.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cargo — Eurasia Bridge">
+<meta property="og:description" content="Cargo available across the Iran–Kazakhstan corridor, both directions.">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%230C0A08%22%2F%3E%3Cpath%20d%3D%22M5%2021%20C11%2021%2012%2010%2016%2010%20C20%2010%2021%2021%2027%2021%22%20stroke%3D%22%23E89A3C%22%20stroke-width%3D%222.4%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2210%22%20r%3D%222.6%22%20fill%3D%22%23E89A3C%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Onest:wght@400;500;600;700;800&family=Vazirmatn:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body>
+<div class="curtain"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="grain"></div>
+<div class="cursor-glow"></div>
+
+<nav class="nav"><div class="pill">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 24 24" fill="none"><path d="M2 16 C7 16 8 8 12 8 C16 8 17 16 22 16" stroke="#E89A3C" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="8" r="2.2" fill="#E89A3C"/></svg>
+    <span class="full" data-i18n="brand">Eurasia Bridge</span>
+  </div>
+  <div class="navlinks">
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="routes.html" data-i18n="nav_routes">Routes</a>
+    <a href="listings.html" class="active" data-i18n="nav_cargo">Cargo</a>
+    <a href="contact.html" data-i18n="nav_contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <div class="langsw" role="group" aria-label="Language">
+      <button data-lang="en" class="on">EN</button><button data-lang="ru">RU</button><button data-lang="fa">FA</button>
+    </div>
+    <a class="btn btn-gold" href="contact.html" data-i18n="cta_quote">Get a route quote</a>
+  </div>
+</div></nav>
+
+<section class="band sec-anim" style="padding-top:clamp(130px,18vh,190px)">
+  <div class="bg bg-aurora"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="lst_eyebrow">Cargo listings</div>
+      <h2 data-i18n="lst_title">Cargo on the corridor.</h2>
+      <p data-i18n="lst_sub">Live lots offered both ways across the Iran–Kazakhstan corridor. Tap any to enquire.</p>
+    </div>
+
+    <div class="lst-bar reveal">
+      <div class="lst-filters">
+        <button data-lfilter="all" class="on" data-i18n="lst_all">All</button>
+        <button data-lfilter="iran-cis" data-i18n="d_iran">Iran → CIS</button>
+        <button data-lfilter="cis-iran" data-i18n="d_cis">CIS → Iran</button>
+      </div>
+      <div class="lst-count-wrap"><span id="lst-count">0</span> <span data-i18n="nav_cargo">Cargo</span></div>
+    </div>
+
+    <div id="listings" class="lgrid reveal"></div>
+
+    <p class="lst-note" data-i18n="lst_add">To add or edit cargo, update the Listings tab of the connected Google Sheet.</p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div class="foot-brand"><span data-i18n="brand">Eurasia Bridge</span><p data-i18n="f_tag">A trading & logistics intermediary on the Iran–Kazakhstan corridor.</p></div>
+    <div class="foot-col"><h5 data-i18n="f_explore">Explore</h5><a href="index.html" data-i18n="nav_home">Home</a><a href="routes.html" data-i18n="nav_routes">Routes</a><a href="contact.html" data-i18n="nav_contact">Contact</a></div>
+    <div class="foot-col"><h5 data-i18n="f_reach">Reach us</h5><a href="mailto:enquiry@eurasia-bridge.kz">enquiry@eurasia-bridge.kz</a><a href="tel:+77000000000">+7 (700) 000-00-00</a><a href="contact.html">Aktau · Almaty · Tehran</a></div>
+  </div>
+  <div class="foot-bottom"><span data-i18n="f_rights">© 2026 Eurasia Bridge</span><span>EN · RU · FA · KZ</span></div>
+</div></footer>
+
+<script src="app.js?v=13"></script>
+</body>
+</html>

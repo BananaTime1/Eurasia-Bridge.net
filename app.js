@@ -85,7 +85,7 @@ const T = {
     q_dir:"Which way is the cargo moving?", q_cargo:"What are you shipping?", q_vol:"How much, and on what terms?", q_route:"Any route preference?",
     f_incoterm:"Incoterm", res_rec:"Recommended route", res_total:"Door-to-shelf", res_days:"days",
     tl1:"Pickup & consolidation", tl2:"Origin customs & docs", tl3:"Main transit", tl4:"Border / transshipment", tl5:"Destination customs (EAEU)", tl6:"Delivery & shelf placement",
-    vb_title:"Cargo moving, every day.", vb_sub:"Rail, ferry and road — one operator accountable from the gate to the shelf.", vb_groups:"product groups", vb_eyebrow:"The corridor, in motion", g_produce:"Fresh produce", g_constr:"Construction", ct_ok_t:"Thanks — enquiry received.", ct_ok_p:"We'll come back with an indicative route within one business day.", net_eyebrow:"02 — The network", net_title:"Iran to every major CIS city.", net_sub:"Lanes from Iranian hubs — Tehran, Tabriz, Mashhad — to Moscow, Almaty, Astana, Tashkent, Baku and beyond. Drag the globe to explore.",
+    vb_title:"Cargo moving, every day.", vb_sub:"Rail, ferry and road — one operator accountable from the gate to the shelf.", vb_groups:"product groups", vb_eyebrow:"The corridor, in motion", g_produce:"Fresh produce", g_constr:"Construction", ct_ok_t:"Thanks — enquiry received.", ct_ok_p:"We'll come back with an indicative route within one business day.", net_eyebrow:"02 — The network", net_title:"Iran to every major CIS city.", net_sub:"Lanes from Iranian hubs — Tehran, Tabriz, Mashhad — to Moscow, Almaty, Astana, Tashkent, Baku and beyond. Drag the globe to explore.", nav_cargo:"Cargo", lst_eyebrow:"Cargo listings", lst_title:"Cargo on the corridor.", lst_sub:"Live lots offered both ways across the Iran–Kazakhstan corridor. Tap any to enquire.", lst_all:"All", lst_origin:"Origin", lst_moq:"Min. lot", lst_enquire:"Enquire", lst_add:"To add or edit cargo, update the Listings tab of the connected Google Sheet.", news_eyebrow:"Corridor news", news_title:"Latest from the region.", news_sub:"Iran, Kazakhstan and the CIS — headlines, updated automatically.", news_more:"Read", news_empty:"Live news appears on the published site.",
   },
   ru:{
     brand:"Евразия Мост",
@@ -163,7 +163,7 @@ const T = {
     q_dir:"В какую сторону идёт груз?", q_cargo:"Что вы отправляете?", q_vol:"Сколько и на каких условиях?", q_route:"Есть предпочтение по маршруту?",
     f_incoterm:"Инкотермс", res_rec:"Рекомендуемый маршрут", res_total:"От двери до полки", res_days:"дней",
     tl1:"Забор и консолидация", tl2:"Таможня и документы (отправление)", tl3:"Основной транзит", tl4:"Граница / перегрузка", tl5:"Таможня назначения (ЕАЭС)", tl6:"Доставка и выкладка",
-    vb_title:"Груз в движении, каждый день.", vb_sub:"Ж/д, паром и автодорога — один оператор отвечает от ворот до полки.", vb_groups:"товарные группы", vb_eyebrow:"Коридор в движении", g_produce:"Свежие фрукты", g_constr:"Стройматериалы", ct_ok_t:"Спасибо — заявка получена.", ct_ok_p:"Вернёмся с предварительным маршрутом в течение одного рабочего дня.", net_eyebrow:"02 — Сеть", net_title:"Иран — в каждый крупный город СНГ.", net_sub:"Линии от иранских хабов — Тегеран, Тебриз, Мешхед — до Москвы, Алматы, Астаны, Ташкента, Баку и далее. Вращайте глобус, чтобы посмотреть.",
+    vb_title:"Груз в движении, каждый день.", vb_sub:"Ж/д, паром и автодорога — один оператор отвечает от ворот до полки.", vb_groups:"товарные группы", vb_eyebrow:"Коридор в движении", g_produce:"Свежие фрукты", g_constr:"Стройматериалы", ct_ok_t:"Спасибо — заявка получена.", ct_ok_p:"Вернёмся с предварительным маршрутом в течение одного рабочего дня.", net_eyebrow:"02 — Сеть", net_title:"Иран — в каждый крупный город СНГ.", net_sub:"Линии от иранских хабов — Тегеран, Тебриз, Мешхед — до Москвы, Алматы, Астаны, Ташкента, Баку и далее. Вращайте глобус, чтобы посмотреть.", nav_cargo:"Грузы", lst_eyebrow:"Каталог грузов", lst_title:"Грузы на коридоре.", lst_sub:"Актуальные партии в обе стороны по коридору Иран–Казахстан. Нажмите, чтобы оставить запрос.", lst_all:"Все", lst_origin:"Происхождение", lst_moq:"Мин. партия", lst_enquire:"Запросить", lst_add:"Чтобы добавить или изменить груз, обновите вкладку «Listings» в подключённой Google-таблице.", news_eyebrow:"Новости коридора", news_title:"Последнее из региона.", news_sub:"Иран, Казахстан и СНГ — заголовки, обновляются автоматически.", news_more:"Читать", news_empty:"Живые новости отображаются на опубликованном сайте.",
   },
   fa:{
     brand:"پل اوراسیا",
@@ -241,7 +241,7 @@ const T = {
     q_dir:"بار به کدام سو می‌رود؟", q_cargo:"چه چیزی ارسال می‌کنید؟", q_vol:"چه مقدار و با چه شرایطی؟", q_route:"مسیر ترجیحی دارید؟",
     f_incoterm:"اینکوترمز", res_rec:"مسیر پیشنهادی", res_total:"از مبدأ تا قفسه", res_days:"روز",
     tl1:"جمع‌آوری و تجمیع", tl2:"گمرک و اسناد مبدأ", tl3:"ترانزیت اصلی", tl4:"مرز / تخلیه و بارگیری", tl5:"گمرک مقصد (EAEU)", tl6:"تحویل و چیدمان قفسه",
-    vb_title:"بار در حرکت، هر روز.", vb_sub:"ریل، کشتی و جاده — یک اپراتور پاسخگو از دروازه تا قفسه.", vb_groups:"گروه کالایی", vb_eyebrow:"کریدور در حرکت", g_produce:"محصولات تازه", g_constr:"مصالح ساختمانی", ct_ok_t:"سپاس — درخواست دریافت شد.", ct_ok_p:"ظرف یک روز کاری با یک مسیر اولیه بازمی‌گردیم.", net_eyebrow:"۰۲ — شبکه", net_title:"ایران به هر شهر بزرگ مشترک‌المنافع.", net_sub:"خطوط از هاب‌های ایران — تهران، تبریز، مشهد — تا مسکو، آلماتی، آستانه، تاشکند، باکو و فراتر. برای کاوش، کره را بچرخانید.",
+    vb_title:"بار در حرکت، هر روز.", vb_sub:"ریل، کشتی و جاده — یک اپراتور پاسخگو از دروازه تا قفسه.", vb_groups:"گروه کالایی", vb_eyebrow:"کریدور در حرکت", g_produce:"محصولات تازه", g_constr:"مصالح ساختمانی", ct_ok_t:"سپاس — درخواست دریافت شد.", ct_ok_p:"ظرف یک روز کاری با یک مسیر اولیه بازمی‌گردیم.", net_eyebrow:"۰۲ — شبکه", net_title:"ایران به هر شهر بزرگ مشترک‌المنافع.", net_sub:"خطوط از هاب‌های ایران — تهران، تبریز، مشهد — تا مسکو، آلماتی، آستانه، تاشکند، باکو و فراتر. برای کاوش، کره را بچرخانید.", nav_cargo:"کالاها", lst_eyebrow:"فهرست کالاها", lst_title:"کالاهای کریدور.", lst_sub:"محموله‌های موجود در هر دو جهت کریدور ایران–قزاقستان. برای استعلام روی هر مورد بزنید.", lst_all:"همه", lst_origin:"مبدأ", lst_moq:"حداقل محموله", lst_enquire:"استعلام", lst_add:"برای افزودن یا ویرایش کالا، برگه‌ی Listings در Google Sheet متصل را به‌روزرسانی کنید.", news_eyebrow:"اخبار کریدور", news_title:"آخرین اخبار منطقه.", news_sub:"ایران، قزاقستان و کشورهای مشترک‌المنافع — سرخط‌ها، به‌روزرسانی خودکار.", news_more:"خواندن", news_empty:"اخبار زنده در سایت منتشرشده نمایش داده می‌شود.",
   }
 };
 
@@ -257,6 +257,23 @@ let LANG = localStorage.getItem("eb_lang") || "ru";
    Paste your Google Apps Script Web App URL here to receive enquiries in a
    Google Sheet. See SETUP.md for the 5-minute setup. Leave "" to just demo. */
 const SHEET_ENDPOINT = "";
+/* Optional: an Apps Script doGet URL to load cargo listings live from a Sheet
+   "Listings" tab. Leave "" to use the built-in seed below. */
+const LISTINGS_ENDPOINT = "";
+
+const LISTINGS_SEED = [
+  {dir:"iran-cis",hs:"0802.52",origin:"Rafsanjan, IR",moq:"20 t",barter:false,en:"Pistachios, in-shell (Fandoghi)",ru:"Фисташки в скорлупе (Фандоги)"},
+  {dir:"iran-cis",hs:"0910.20",origin:"Mashhad, IR",moq:"5 kg",barter:false,en:"Saffron, Negin grade",ru:"Шафран, сорт «Негин»"},
+  {dir:"iran-cis",hs:"0804.10",origin:"Bam, IR",moq:"20 t",barter:false,en:"Dates, Mazafati",ru:"Финики «Мазафати»"},
+  {dir:"iran-cis",hs:"2713.20",origin:"Bandar Abbas, IR",moq:"22 t",barter:false,en:"Bitumen 60/70",ru:"Битум 60/70"},
+  {dir:"iran-cis",hs:"3902.10",origin:"Assaluyeh, IR",moq:"22 t",barter:false,en:"Polypropylene granules",ru:"Полипропилен, гранулы"},
+  {dir:"iran-cis",hs:"5701.10",origin:"Tabriz, IR",moq:"—",barter:false,en:"Handmade wool carpets",ru:"Ковры ручной работы, шерсть"},
+  {dir:"cis-iran",hs:"1001.99",origin:"Kostanay, KZ",moq:"60 t",barter:true,en:"Milling wheat, 12.5% protein",ru:"Пшеница мукомольная, протеин 12,5%"},
+  {dir:"cis-iran",hs:"1512.11",origin:"Russia / KZ",moq:"22 t",barter:false,en:"Crude sunflower oil",ru:"Масло подсолнечное сырое"},
+  {dir:"cis-iran",hs:"7208.39",origin:"Russia",moq:"25 t",barter:false,en:"Hot-rolled steel coil",ru:"Прокат стальной горячекатаный"},
+  {dir:"cis-iran",hs:"4407.11",origin:"Siberia, RU",moq:"50 m³",barter:false,en:"Sawn softwood timber",ru:"Пиломатериалы хвойные"},
+  {dir:"cis-iran",hs:"3102.10",origin:"Uzbekistan",moq:"25 t",barter:true,en:"Urea fertiliser N46",ru:"Карбамид N46"}
+];
 
 function tr(k){ return (T[LANG] && T[LANG][k]!=null) ? T[LANG][k] : (T.en[k]!=null?T.en[k]:k); }
 
@@ -273,6 +290,7 @@ function applyLang(l){
   document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on", b.dataset.lang===l));
   if(window.__refreshRoute) window.__refreshRoute();
   if(window.__recalc) window.__recalc();
+  if(window.__renderListings) window.__renderListings();
 }
 
 /* ---------- interactive globe ---------- */
@@ -586,6 +604,7 @@ function initMobileNav(){
 function initContactForm(){
   const form=document.querySelector(".enq-form"); if(!form) return;
   const email=form.querySelector("#c-email"); if(email) email.type="email";
+  try{const cg=new URLSearchParams(location.search).get("cargo"); if(cg){const cf=form.querySelector("#c-cargo"); if(cf&&!cf.value) cf.value=cg;}}catch(e){}
   form.addEventListener("submit",e=>{
     e.preventDefault();
     let ok=true;
@@ -604,6 +623,58 @@ function initContactForm(){
 
 const LOGO='<svg class="mark" viewBox="0 0 30 30" fill="none" aria-hidden="true"><circle cx="15" cy="15" r="13.4" stroke="#E89A3C" stroke-opacity=".28" stroke-width="1.1"/><path d="M4.5 19.6 C10 19.6 11 8.4 15 8.4 C19 8.4 20 19.6 25.5 19.6" stroke="#E89A3C" stroke-width="2" stroke-linecap="round"/><path d="M6.6 19.6 C11 19.6 12.6 13.4 15 13.4 C17.4 13.4 19 19.6 23.4 19.6" stroke="#E89A3C" stroke-opacity=".45" stroke-width="1.35" stroke-linecap="round"/><circle cx="15" cy="8.4" r="2.5" fill="#E89A3C"/></svg>';
 function initLogo(){document.querySelectorAll(".brand .mark").forEach(el=>{el.outerHTML=LOGO;});}
+
+/* ---------- cargo listings ---------- */
+function initListings(){
+  const grid=document.getElementById("listings"); if(!grid) return;
+  let items=LISTINGS_SEED.slice(), filter="all";
+  const nm=it=>it[LANG]||it.ru||it.en||it.name||"";
+  function render(){
+    grid.innerHTML="";
+    items.filter(it=>filter==="all"||it.dir===filter).forEach(it=>{
+      const card=document.createElement("a"); card.className="lcard";
+      card.href="contact.html?cargo="+encodeURIComponent(nm(it));
+      const dirLabel=(String(it.dir).indexOf("cis-iran")===0)?tr("d_cis"):tr("d_iran");
+      card.innerHTML=
+        '<div class="lc-top"><span class="lc-dir">'+dirLabel+'</span>'+(it.barter?'<span class="lc-barter">◆ '+tr("out_barter")+'</span>':'')+'</div>'+
+        '<div class="lc-name">'+nm(it)+'</div>'+
+        '<div class="lc-meta"><span><b>HS</b> '+(it.hs||"—")+'</span><span><b>'+tr("lst_origin")+'</b> '+(it.origin||"—")+'</span><span><b>'+tr("lst_moq")+'</b> '+(it.moq||"—")+'</span></div>'+
+        '<div class="lc-cta">'+tr("lst_enquire")+' →</div>';
+      grid.appendChild(card);
+    });
+    const c=document.getElementById("lst-count"); if(c)c.textContent=items.filter(it=>filter==="all"||it.dir===filter).length;
+  }
+  document.querySelectorAll("[data-lfilter]").forEach(b=>b.addEventListener("click",()=>{
+    filter=b.dataset.lfilter; document.querySelectorAll("[data-lfilter]").forEach(x=>x.classList.toggle("on",x===b)); render();
+  }));
+  window.__renderListings=render; render();
+  if(LISTINGS_ENDPOINT){ fetch(LISTINGS_ENDPOINT+"?type=listings").then(r=>r.json()).then(rows=>{ if(Array.isArray(rows)&&rows.length){ items=rows; render(); } }).catch(()=>{}); }
+}
+
+/* ---------- live regional news ---------- */
+function initNews(){
+  const box=document.getElementById("news-grid"); if(!box) return;
+  const q='Iran Kazakhstan trade corridor OR logistics OR CIS';
+  const rss='https://news.google.com/rss/search?q='+encodeURIComponent(q)+'&hl=en-US&gl=US&ceid=US:en';
+  const url='https://api.allorigins.win/raw?url='+encodeURIComponent(rss);
+  const fail=()=>{ box.innerHTML='<div class="news-note">'+tr("news_empty")+'</div>'; };
+  fetch(url).then(r=>r.text()).then(xml=>{
+    const doc=new DOMParser().parseFromString(xml,"text/xml");
+    const items=[].slice.call(doc.querySelectorAll("item")).slice(0,6);
+    if(!items.length){ fail(); return; }
+    const loc=LANG==="ru"?"ru-RU":LANG==="fa"?"fa-IR":"en-GB";
+    box.innerHTML="";
+    items.forEach(it=>{
+      const g=s=>{const el=it.querySelector(s);return el?el.textContent:"";};
+      const title=g("title").replace(/\s+-\s+[^-]+$/,"");
+      const src=g("source")||"News";
+      let d; try{d=new Date(g("pubDate")).toLocaleDateString(loc,{day:"numeric",month:"short"});}catch(e){d="";}
+      const a=document.createElement("a"); a.className="ncard"; a.href=g("link")||"#"; a.target="_blank"; a.rel="noopener";
+      a.innerHTML='<div class="nc-src">'+src+(d?' · '+d:'')+'</div><div class="nc-title">'+title+'</div><div class="nc-go">'+tr("news_more")+' ↗</div>';
+      box.appendChild(a);
+    });
+  }).catch(fail);
+}
 
 function initHeroScroll(globe){
   const hs=document.querySelector(".hero-scroll"); if(!hs||!globe) return;
@@ -633,5 +704,5 @@ document.addEventListener("DOMContentLoaded",()=>{
   if(heroStage){ const hg=new Globe(heroStage,{zoom:1.4,center:[40,55],showModal:false,reveal:0,autoRotate:true,rotSpeed:0.0024}); initHeroScroll(hg); }
   const expStage=document.querySelector(".explorer .globe-stage");
   if(expStage){ const g=new Globe(expStage,{active:"rail",zoom:2.7,center:[40,53]}); initRouteExplorer(g); }
-  initWizard();
+  initWizard(); initListings(); initNews();
 });
