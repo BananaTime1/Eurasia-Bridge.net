@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Eurasia Bridge — Direction B (concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0B0A08; --paper:#F5F1EA; --grey:#A49C90;
+    --gold:#E89A3C; --orange:#F0602A; --hair:rgba(245,241,234,.14);
+    --disp:'Oswald',system-ui,sans-serif; --body:'Onest',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box} body{margin:0;background:var(--black);color:var(--paper);font-family:var(--body);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,52px)}
+  .tag{position:fixed;top:14px;left:14px;z-index:9;font-family:'Onest';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);background:rgba(11,10,8,.6);border:1px solid var(--hair);padding:6px 12px;border-radius:100px}
+
+  /* nav */
+  nav{position:absolute;top:0;left:0;right:0;z-index:5}
+  .navrow{display:flex;align-items:center;gap:28px;padding:26px 0}
+  .brand{font-family:var(--disp);font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+  .brand svg{width:24px;height:24px}
+  .nlinks{display:flex;gap:26px;margin-inline-start:20px;font-size:14px;color:#e8e2d7}
+  .nlinks a{color:#d9d2c6;text-decoration:none}
+  .nright{margin-inline-start:auto;display:flex;gap:12px;align-items:center}
+  .btn{font-family:var(--body);font-weight:600;font-size:14px;border-radius:100px;padding:12px 22px;cursor:pointer;border:1px solid transparent;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+  .btn-gold{background:var(--gold);color:#241a06} .btn-ghost{border-color:var(--hair);color:var(--paper)}
+
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+  .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:saturate(.9) contrast(1.03)}
+  .hero .veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,10,8,.72),rgba(11,10,8,.35) 32%,rgba(11,10,8,.4) 55%,rgba(11,10,8,.96)),radial-gradient(70% 60% at 15% 100%,rgba(232,154,60,.12),transparent 60%)}
+  .hero-inner{position:relative;z-index:2;padding-bottom:34px}
+  .eyebrow{font-family:'Onest';font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  h1{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.005em;line-height:.92;margin:0;
+     font-size:clamp(48px,9vw,140px)}
+  h1 .g{color:var(--gold)}
+  .sub{font-family:var(--body);font-size:clamp(15px,1.5vw,19px);color:#e7e0d4;max-width:56ch;margin:26px 0 0;line-height:1.5}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+  /* stat row */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;border-top:1px solid var(--hair);margin-top:40px;padding-top:26px}
+  .stat .n{font-family:var(--disp);font-weight:600;font-size:clamp(34px,4vw,52px);line-height:1}
+  .stat .n small{color:var(--gold)}
+  .stat .l{font-family:'Onest';font-size:13px;color:var(--grey);margin-top:8px;max-width:22ch}
+  @media(max-width:820px){ .nlinks{display:none} .stats{grid-template-columns:1fr 1fr;gap:22px} h1{font-size:clamp(44px,13vw,80px)} }
+</style>
+</head>
+<body>
+<div class="tag">Direction B — concept · photographic + bold</div>
+
+<div class="hero">
+  <video autoplay muted loop playsinline preload="metadata"><source src="media/port-containers.mp4" type="video/mp4"></video>
+  <div class="veil"></div>
+
+  <nav><div class="wrap navrow">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M2 16 C7 16 8 8 12 8 C16 8 17 16 22 16" stroke="#E89A3C" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="8" r="2.4" fill="#E89A3C"/></svg>
+      Eurasia Bridge
+    </div>
+    <div class="nlinks"><a>Routes</a><a>Services</a><a>Calculator</a><a>Contact</a></div>
+    <div class="nright"><a class="btn btn-gold">Get a route quote</a></div>
+  </div></nav>
+
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Iran ⇄ Kazakhstan trade corridor</div>
+    <h1>One partner —<br>supplier <span class="g">to shelf.</span></h1>
+    <p class="sub">Sourcing, transport, customs, payment and barter across the corridor — run by one accountable operator, from the factory floor to the retail shelf.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold">Get a route quote →</a>
+      <a class="btn btn-ghost">See the three routes</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">3</div><div class="l">routes across the corridor</div></div>
+      <div class="stat"><div class="n">9<small>+</small></div><div class="l">product groups, both directions</div></div>
+      <div class="stat"><div class="n">1<small> day</small></div><div class="l">to an indicative route quote</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">point of accountability, not four</div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
