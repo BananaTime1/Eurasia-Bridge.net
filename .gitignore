@@ -1,3 +1,8 @@
 .DS_Store
 *.log
 Thumbs.db
+
+# Internal — kept local, not published on the public website
+HANDOFF.md
+google-sheet.gs
+tools/

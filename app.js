@@ -28,8 +28,8 @@ const T = {
     /* routes teaser + explorer */
     rt_eyebrow:"02 — The corridor",
     rt_title:"Three routes. Choosing between them is the expertise.",
-    rt_sub:"There isn't one way across — there are three. Spin the globe, switch a route, and read its crossings, transit range, and what governs the timing.",
-    rt_cta:"Open the route explorer",
+    rt_sub:"There isn't one way across — there are three. Switch between them to read each one's crossings, transit range, and what governs the timing.",
+    rt_cta:"See all three routes",
     r_rail_t:"Eastern railway", r_ferry_t:"Caspian ferry", r_road_t:"Road via Turkmenistan",
     m_transit:"Transit", m_gov:"Governed by",
     r_rail_mode:"Rail · end-to-end", r_rail_name:"Eastern railway (KTI)",
@@ -85,7 +85,11 @@ const T = {
     q_dir:"Which way is the cargo moving?", q_cargo:"What are you shipping?", q_vol:"How much, and on what terms?", q_route:"Any route preference?",
     f_incoterm:"Incoterm", res_rec:"Recommended route", res_total:"Door-to-shelf", res_days:"days",
     tl1:"Pickup & consolidation", tl2:"Origin customs & docs", tl3:"Main transit", tl4:"Border / transshipment", tl5:"Destination customs (EAEU)", tl6:"Delivery & shelf placement",
-    vb_title:"Cargo moving, every day.", vb_sub:"Rail, ferry and road — one operator accountable from the gate to the shelf.", vb_groups:"product groups", vb_eyebrow:"The corridor, in motion", g_produce:"Fresh produce", g_constr:"Construction", ct_ok_t:"Thanks — enquiry received.", ct_ok_p:"We'll come back with an indicative route within one business day.", net_eyebrow:"02 — The network", net_title:"Iran to every major CIS city.", net_sub:"Lanes from Iranian hubs — Tehran, Tabriz, Mashhad — to Moscow, Almaty, Astana, Tashkent, Baku and beyond. Drag the globe to explore.", nav_cargo:"Cargo", lst_eyebrow:"Cargo listings", lst_title:"Cargo on the corridor.", lst_sub:"Live lots offered both ways across the Iran–Kazakhstan corridor. Tap any to enquire.", lst_all:"All", lst_origin:"Origin", lst_moq:"Min. lot", lst_enquire:"Enquire", lst_add:"To add or edit cargo, update the Listings tab of the connected Google Sheet.", news_eyebrow:"Corridor news", news_title:"Latest from the region.", news_sub:"Iran, Kazakhstan and the CIS — headlines, updated automatically.", news_more:"Read", news_empty:"Live news appears on the published site.",
+    vb_title:"Cargo moving, every day.", vb_sub:"Rail, ferry and road — one operator accountable from the gate to the shelf.", vb_groups:"product groups", vb_eyebrow:"The corridor, in motion", g_produce:"Fresh produce", g_constr:"Construction", ct_ok_t:"Thanks — enquiry received.", ct_ok_p:"We'll come back with an indicative route within one business day.", net_eyebrow:"02 — The network", net_title:"Iran to every major CIS city.", net_sub:"Lanes from Iranian hubs — Tehran, Tabriz, Mashhad — to Moscow, Almaty, Astana, Tashkent, Baku and beyond.", nav_cargo:"Cargo", lst_eyebrow:"Cargo listings", lst_title:"Cargo on the corridor.", lst_sub:"Live lots offered both ways across the Iran–Kazakhstan corridor. Tap any to enquire.", lst_all:"All", lst_origin:"Origin", lst_moq:"Min. lot", lst_enquire:"Enquire", lst_add:"Anyone can add cargo — submissions appear here once our team approves them.", lst_empty:"No cargo listed yet — new lots appear here as they're added.",
+    lst_add_btn:"Add cargo", ac_title:"Add cargo", ac_sub:"Submit a lot to the corridor catalogue. It appears on the site once our team approves it.",
+    ac_dir:"Direction", ac_name:"Cargo name", ac_weight:"Weight / volume", ac_origin:"Origin", ac_moq:"Min. order (optional)", ac_barter:"Barter-eligible",
+    ac_desc:"Description", ac_photos:"Photos", ac_photos_hint:"Up to 4 images.", ac_submit:"Submit for review", ac_sending:"Sending…",
+    ac_ok:"Thanks — your cargo was submitted and will appear once approved.", ac_err:"Something went wrong. Please try again.", ac_pending:"Pending review", ac_close:"Close", news_eyebrow:"Corridor news", news_title:"Latest from the region.", news_sub:"Iran, Kazakhstan and the CIS — headlines, updated automatically.", news_more:"Read", news_empty:"Live news appears on the published site.",
   },
   ru:{
     brand:"Евразия Мост",
@@ -102,7 +106,7 @@ const T = {
     strip1:"Фисташки",strip2:"Шафран",strip3:"Полимеры",strip4:"Битум",strip5:"Зерно",strip6:"Прокат",strip7:"Удобрения",strip8:"Ковры",
     dir_eyebrow:"01 — Два направления",
     dir_title:"Два направления, одна инфраструктура",
-    dir_sub:"Всё движется одним из двух путей по одному коридору. Когда чистый денежный канал затруднён, мы структурируем бартер с ценовым паритетом.",
+    dir_sub:"Всё движется одним из двух путей по одному коридору. Когда прямой денежный расчёт затруднён, мы выстраиваем бартер с ценовым паритетом.",
     dir1_h:"Иранские товары — на север, в СНГ", dir1_p:"Девять товарных групп в Казахстан и страны СНГ.",
     dir2_h:"Встречные поставки — на юг, в Иран", dir2_p:"Под реальный спрос иранской стороны.",
     g_pist:"Фисташки",g_saf:"Шафран",g_dates:"Финики",g_poly:"Полимеры",g_bit:"Битум",g_carp:"Ковры",g_cosm:"Косметика",g_hh:"Бытовая химия",
@@ -110,8 +114,8 @@ const T = {
     barter:"◆ Зерно и химия — по бартеру",
     rt_eyebrow:"02 — Коридор",
     rt_title:"Три маршрута. Выбор между ними — и есть экспертиза.",
-    rt_sub:"Через коридор нет одного пути — их три. Вращайте глобус, переключайте маршрут и смотрите переходы, сроки и что определяет тайминг.",
-    rt_cta:"Открыть карту маршрутов",
+    rt_sub:"Через коридор нет одного пути — их три. Переключайтесь между ними и смотрите переходы, сроки и что определяет тайминг.",
+    rt_cta:"Смотреть все три маршрута",
     r_rail_t:"Железная дорога", r_ferry_t:"Каспийский паром", r_road_t:"Автодорога",
     m_transit:"Срок", m_gov:"Определяет",
     r_rail_mode:"Ж/д · сквозной", r_rail_name:"Восточная ж/д (КТЖ)",
@@ -163,7 +167,11 @@ const T = {
     q_dir:"В какую сторону идёт груз?", q_cargo:"Что вы отправляете?", q_vol:"Сколько и на каких условиях?", q_route:"Есть предпочтение по маршруту?",
     f_incoterm:"Инкотермс", res_rec:"Рекомендуемый маршрут", res_total:"От двери до полки", res_days:"дней",
     tl1:"Забор и консолидация", tl2:"Таможня и документы (отправление)", tl3:"Основной транзит", tl4:"Граница / перегрузка", tl5:"Таможня назначения (ЕАЭС)", tl6:"Доставка и выкладка",
-    vb_title:"Груз в движении, каждый день.", vb_sub:"Ж/д, паром и автодорога — один оператор отвечает от ворот до полки.", vb_groups:"товарные группы", vb_eyebrow:"Коридор в движении", g_produce:"Свежие фрукты", g_constr:"Стройматериалы", ct_ok_t:"Спасибо — заявка получена.", ct_ok_p:"Вернёмся с предварительным маршрутом в течение одного рабочего дня.", net_eyebrow:"02 — Сеть", net_title:"Иран — в каждый крупный город СНГ.", net_sub:"Линии от иранских хабов — Тегеран, Тебриз, Мешхед — до Москвы, Алматы, Астаны, Ташкента, Баку и далее. Вращайте глобус, чтобы посмотреть.", nav_cargo:"Грузы", lst_eyebrow:"Каталог грузов", lst_title:"Грузы на коридоре.", lst_sub:"Актуальные партии в обе стороны по коридору Иран–Казахстан. Нажмите, чтобы оставить запрос.", lst_all:"Все", lst_origin:"Происхождение", lst_moq:"Мин. партия", lst_enquire:"Запросить", lst_add:"Чтобы добавить или изменить груз, обновите вкладку «Listings» в подключённой Google-таблице.", news_eyebrow:"Новости коридора", news_title:"Последнее из региона.", news_sub:"Иран, Казахстан и СНГ — заголовки, обновляются автоматически.", news_more:"Читать", news_empty:"Живые новости отображаются на опубликованном сайте.",
+    vb_title:"Груз в движении, каждый день.", vb_sub:"Ж/д, паром и автодорога — один оператор отвечает от ворот до полки.", vb_groups:"товарные группы", vb_eyebrow:"Коридор в движении", g_produce:"Свежие фрукты", g_constr:"Стройматериалы", ct_ok_t:"Спасибо — заявка получена.", ct_ok_p:"Вернёмся с предварительным маршрутом в течение одного рабочего дня.", net_eyebrow:"02 — Сеть", net_title:"Иран — в каждый крупный город СНГ.", net_sub:"Линии от иранских хабов — Тегеран, Тебриз, Мешхед — до Москвы, Алматы, Астаны, Ташкента, Баку и далее.", nav_cargo:"Грузы", lst_eyebrow:"Каталог грузов", lst_title:"Грузы на коридоре.", lst_sub:"Актуальные партии в обе стороны по коридору Иран–Казахстан. Нажмите, чтобы оставить запрос.", lst_all:"Все", lst_origin:"Происхождение", lst_moq:"Мин. партия", lst_enquire:"Запросить", lst_add:"Любой может добавить груз — заявки появляются здесь после проверки нашей командой.", lst_empty:"Пока нет размещённых грузов — новые партии появятся здесь.",
+    lst_add_btn:"Добавить груз", ac_title:"Добавить груз", ac_sub:"Отправьте партию в каталог коридора. Она появится на сайте после проверки нашей командой.",
+    ac_dir:"Направление", ac_name:"Название груза", ac_weight:"Вес / объём", ac_origin:"Происхождение", ac_moq:"Мин. партия (необязательно)", ac_barter:"Возможен бартер",
+    ac_desc:"Описание", ac_photos:"Фотографии", ac_photos_hint:"До 4 изображений.", ac_submit:"Отправить на проверку", ac_sending:"Отправка…",
+    ac_ok:"Спасибо — груз отправлен и появится после одобрения.", ac_err:"Что-то пошло не так. Попробуйте ещё раз.", ac_pending:"На проверке", ac_close:"Закрыть", news_eyebrow:"Новости коридора", news_title:"Последнее из региона.", news_sub:"Иран, Казахстан и СНГ — заголовки, обновляются автоматически.", news_more:"Читать", news_empty:"Новости появляются на опубликованном сайте.",
   },
   fa:{
     brand:"پل اوراسیا",
@@ -188,8 +196,8 @@ const T = {
     barter:"◆ غلات و مواد شیمیایی — قابل تهاتر",
     rt_eyebrow:"۰۲ — کریدور",
     rt_title:"سه مسیر. انتخاب میان آن‌ها همان تخصص است.",
-    rt_sub:"یک راه برای عبور وجود ندارد — سه راه هست. کره را بچرخانید، مسیر را عوض کنید و گذرگاه‌ها، بازه‌ی زمان و عامل زمان‌بندی را ببینید.",
-    rt_cta:"باز کردن نقشه‌ی مسیرها",
+    rt_sub:"یک راه برای عبور وجود ندارد — سه راه هست. میان آن‌ها جابه‌جا شوید و گذرگاه‌ها، بازه‌ی زمان و عامل زمان‌بندی را ببینید.",
+    rt_cta:"مشاهده‌ی هر سه مسیر",
     r_rail_t:"راه‌آهن شرقی", r_ferry_t:"کشتی خزر", r_road_t:"جاده از ترکمنستان",
     m_transit:"زمان حمل", m_gov:"عامل تعیین‌کننده",
     r_rail_mode:"ریلی · سرتاسری", r_rail_name:"راه‌آهن شرقی (KTI)",
@@ -241,7 +249,11 @@ const T = {
     q_dir:"بار به کدام سو می‌رود؟", q_cargo:"چه چیزی ارسال می‌کنید؟", q_vol:"چه مقدار و با چه شرایطی؟", q_route:"مسیر ترجیحی دارید؟",
     f_incoterm:"اینکوترمز", res_rec:"مسیر پیشنهادی", res_total:"از مبدأ تا قفسه", res_days:"روز",
     tl1:"جمع‌آوری و تجمیع", tl2:"گمرک و اسناد مبدأ", tl3:"ترانزیت اصلی", tl4:"مرز / تخلیه و بارگیری", tl5:"گمرک مقصد (EAEU)", tl6:"تحویل و چیدمان قفسه",
-    vb_title:"بار در حرکت، هر روز.", vb_sub:"ریل، کشتی و جاده — یک اپراتور پاسخگو از دروازه تا قفسه.", vb_groups:"گروه کالایی", vb_eyebrow:"کریدور در حرکت", g_produce:"محصولات تازه", g_constr:"مصالح ساختمانی", ct_ok_t:"سپاس — درخواست دریافت شد.", ct_ok_p:"ظرف یک روز کاری با یک مسیر اولیه بازمی‌گردیم.", net_eyebrow:"۰۲ — شبکه", net_title:"ایران به هر شهر بزرگ مشترک‌المنافع.", net_sub:"خطوط از هاب‌های ایران — تهران، تبریز، مشهد — تا مسکو، آلماتی، آستانه، تاشکند، باکو و فراتر. برای کاوش، کره را بچرخانید.", nav_cargo:"کالاها", lst_eyebrow:"فهرست کالاها", lst_title:"کالاهای کریدور.", lst_sub:"محموله‌های موجود در هر دو جهت کریدور ایران–قزاقستان. برای استعلام روی هر مورد بزنید.", lst_all:"همه", lst_origin:"مبدأ", lst_moq:"حداقل محموله", lst_enquire:"استعلام", lst_add:"برای افزودن یا ویرایش کالا، برگه‌ی Listings در Google Sheet متصل را به‌روزرسانی کنید.", news_eyebrow:"اخبار کریدور", news_title:"آخرین اخبار منطقه.", news_sub:"ایران، قزاقستان و کشورهای مشترک‌المنافع — سرخط‌ها، به‌روزرسانی خودکار.", news_more:"خواندن", news_empty:"اخبار زنده در سایت منتشرشده نمایش داده می‌شود.",
+    vb_title:"بار در حرکت، هر روز.", vb_sub:"ریل، کشتی و جاده — یک اپراتور پاسخگو از دروازه تا قفسه.", vb_groups:"گروه کالایی", vb_eyebrow:"کریدور در حرکت", g_produce:"محصولات تازه", g_constr:"مصالح ساختمانی", ct_ok_t:"سپاس — درخواست دریافت شد.", ct_ok_p:"ظرف یک روز کاری با یک مسیر اولیه بازمی‌گردیم.", net_eyebrow:"۰۲ — شبکه", net_title:"ایران به هر شهر بزرگ مشترک‌المنافع.", net_sub:"خطوط از هاب‌های ایران — تهران، تبریز، مشهد — تا مسکو، آلماتی، آستانه، تاشکند، باکو و فراتر.", nav_cargo:"کالاها", lst_eyebrow:"فهرست کالاها", lst_title:"کالاهای کریدور.", lst_sub:"محموله‌های موجود در هر دو جهت کریدور ایران–قزاقستان. برای استعلام روی هر مورد بزنید.", lst_all:"همه", lst_origin:"مبدأ", lst_moq:"حداقل محموله", lst_enquire:"استعلام", lst_add:"هرکسی می‌تواند بار اضافه کند — پس از تأیید تیم ما اینجا نمایش داده می‌شود.", lst_empty:"هنوز باری ثبت نشده — محموله‌های جدید به‌مرور اینجا نمایش داده می‌شوند.",
+    lst_add_btn:"افزودن بار", ac_title:"افزودن بار", ac_sub:"یک محموله به فهرست کریدور ثبت کنید. پس از تأیید تیم ما روی سایت نمایش داده می‌شود.",
+    ac_dir:"جهت", ac_name:"نام بار", ac_weight:"وزن / حجم", ac_origin:"مبدأ", ac_moq:"حداقل سفارش (اختیاری)", ac_barter:"قابل تهاتر",
+    ac_desc:"توضیحات", ac_photos:"عکس‌ها", ac_photos_hint:"حداکثر ۴ تصویر.", ac_submit:"ارسال برای بررسی", ac_sending:"در حال ارسال…",
+    ac_ok:"سپاس — بار شما ثبت شد و پس از تأیید نمایش داده می‌شود.", ac_err:"خطایی رخ داد. دوباره تلاش کنید.", ac_pending:"در انتظار بررسی", ac_close:"بستن", news_eyebrow:"اخبار کریدور", news_title:"آخرین اخبار منطقه.", news_sub:"ایران، قزاقستان و کشورهای مشترک‌المنافع — سرخط‌ها، به‌روزرسانی خودکار.", news_more:"خواندن", news_empty:"اخبار زنده در سایت منتشرشده نمایش داده می‌شود.",
   }
 };
 
@@ -256,23 +268,19 @@ let LANG = localStorage.getItem("eb_lang") || "ru";
 /* ---------- integrations config ----------
    Paste your Google Apps Script Web App URL here to receive enquiries in a
    Google Sheet. See SETUP.md for the 5-minute setup. Leave "" to just demo. */
-const SHEET_ENDPOINT = "";
+const SHEET_ENDPOINT = "https://script.google.com/a/macros/eurasia-bridge.net/s/AKfycbyLHUwi9nzQ5BxZ1GtQDgun18HAKINHPANRhziBtEWBHLm0UjgIfksAZW1Hv5DvcyED/exec";
 /* Optional: an Apps Script doGet URL to load cargo listings live from a Sheet
    "Listings" tab. Leave "" to use the built-in seed below. */
-const LISTINGS_ENDPOINT = "";
+const LISTINGS_ENDPOINT = "https://script.google.com/a/macros/eurasia-bridge.net/s/AKfycbyLHUwi9nzQ5BxZ1GtQDgun18HAKINHPANRhziBtEWBHLm0UjgIfksAZW1Hv5DvcyED/exec";
+/* Optional: live news with images. Paste the SAME Apps Script Web App URL here
+   (it proxies GNews so the API key stays server-side). Leave "" to fall back to
+   the keyless Google-News headline feed (no images). See SETUP.md / google-sheet.gs. */
+const NEWS_ENDPOINT = "https://script.google.com/a/macros/eurasia-bridge.net/s/AKfycbyLHUwi9nzQ5BxZ1GtQDgun18HAKINHPANRhziBtEWBHLm0UjgIfksAZW1Hv5DvcyED/exec";
 
+// Cleared of demo/placeholder cargo — real lots come from the connected Google
+// Sheet (Listings tab) via LISTINGS_ENDPOINT, added through the on-site "Add cargo"
+// flow. Empty array = the page shows a clean "no cargo yet" state until then.
 const LISTINGS_SEED = [
-  {dir:"iran-cis",hs:"0802.52",origin:"Rafsanjan, IR",moq:"20 t",barter:false,en:"Pistachios, in-shell (Fandoghi)",ru:"Фисташки в скорлупе (Фандоги)"},
-  {dir:"iran-cis",hs:"0910.20",origin:"Mashhad, IR",moq:"5 kg",barter:false,en:"Saffron, Negin grade",ru:"Шафран, сорт «Негин»"},
-  {dir:"iran-cis",hs:"0804.10",origin:"Bam, IR",moq:"20 t",barter:false,en:"Dates, Mazafati",ru:"Финики «Мазафати»"},
-  {dir:"iran-cis",hs:"2713.20",origin:"Bandar Abbas, IR",moq:"22 t",barter:false,en:"Bitumen 60/70",ru:"Битум 60/70"},
-  {dir:"iran-cis",hs:"3902.10",origin:"Assaluyeh, IR",moq:"22 t",barter:false,en:"Polypropylene granules",ru:"Полипропилен, гранулы"},
-  {dir:"iran-cis",hs:"5701.10",origin:"Tabriz, IR",moq:"—",barter:false,en:"Handmade wool carpets",ru:"Ковры ручной работы, шерсть"},
-  {dir:"cis-iran",hs:"1001.99",origin:"Kostanay, KZ",moq:"60 t",barter:true,en:"Milling wheat, 12.5% protein",ru:"Пшеница мукомольная, протеин 12,5%"},
-  {dir:"cis-iran",hs:"1512.11",origin:"Russia / KZ",moq:"22 t",barter:false,en:"Crude sunflower oil",ru:"Масло подсолнечное сырое"},
-  {dir:"cis-iran",hs:"7208.39",origin:"Russia",moq:"25 t",barter:false,en:"Hot-rolled steel coil",ru:"Прокат стальной горячекатаный"},
-  {dir:"cis-iran",hs:"4407.11",origin:"Siberia, RU",moq:"50 m³",barter:false,en:"Sawn softwood timber",ru:"Пиломатериалы хвойные"},
-  {dir:"cis-iran",hs:"3102.10",origin:"Uzbekistan",moq:"25 t",barter:true,en:"Urea fertiliser N46",ru:"Карбамид N46"}
 ];
 
 function tr(k){ return (T[LANG] && T[LANG][k]!=null) ? T[LANG][k] : (T.en[k]!=null?T.en[k]:k); }
@@ -291,6 +299,7 @@ function applyLang(l){
   if(window.__refreshRoute) window.__refreshRoute();
   if(window.__recalc) window.__recalc();
   if(window.__renderListings) window.__renderListings();
+  if(window.__newsReload) window.__newsReload();
 }
 
 /* ---------- interactive globe ---------- */
@@ -313,6 +322,7 @@ const REGIONS=[[32.0,53.5,"IRAN"],[39.2,59.5,"TURKMENISTAN"],[41.4,64.6,"UZBEKIS
 const HUBS={tehran:[35.7,51.4],tabriz:[38.1,46.3],mashhad:[36.3,59.6],isfahan:[32.7,51.7],bandarabbas:[27.2,56.3],anzali:[37.5,49.5],astana:[51.1,71.4],almaty:[43.2,76.9],aktau:[43.6,51.2],atyrau:[47.1,51.9],tashkent:[41.3,69.2],samarkand:[39.7,66.9],bishkek:[42.9,74.6],dushanbe:[38.5,68.8],ashgabat:[37.9,58.4],baku:[40.4,49.9],moscow:[55.75,37.6],kazan:[55.8,49.1]};
 const NET_LINKS=[["tehran","astana"],["tehran","almaty"],["tehran","aktau"],["tehran","atyrau"],["tehran","tashkent"],["tehran","samarkand"],["tehran","bishkek"],["tehran","dushanbe"],["tehran","ashgabat"],["tehran","baku"],["tehran","moscow"],["tehran","kazan"],["tabriz","baku"],["tabriz","moscow"],["tabriz","astana"],["tabriz","aktau"],["tabriz","atyrau"],["tabriz","kazan"],["mashhad","ashgabat"],["mashhad","tashkent"],["mashhad","samarkand"],["mashhad","dushanbe"],["mashhad","almaty"],["mashhad","bishkek"],["mashhad","astana"],["isfahan","aktau"],["isfahan","tashkent"],["isfahan","almaty"],["bandarabbas","aktau"],["bandarabbas","atyrau"],["anzali","aktau"],["anzali","atyrau"],["anzali","baku"]];
 const NET_LABEL={tehran:"TEHRAN",tabriz:"TABRIZ",mashhad:"MASHHAD",almaty:"ALMATY",astana:"ASTANA",tashkent:"TASHKENT",baku:"BAKU",moscow:"MOSCOW",aktau:"AKTAU",ashgabat:"ASHGABAT"};
+const NET_ORIGINS=new Set(["tehran","tabriz","mashhad","isfahan","bandarabbas","anzali"]);
 function toVec(lat,lon){const a=lat*D2R,b=(lon-LON0)*D2R;return [Math.cos(a)*Math.sin(b),Math.sin(a),Math.cos(a)*Math.cos(b)];}
 function slerp(a,b,t){
   let d=a[0]*b[0]+a[1]*b[1]+a[2]*b[2]; d=Math.max(-1,Math.min(1,d));
@@ -434,10 +444,10 @@ class Globe{
         if(ar<=0) continue;
         const upto=Math.max(1,Math.floor(ar*(N-1)));
         c.globalAlpha=0.34+0.30*ar; c.lineWidth=1.35; let started=false; c.beginPath();
-        for(let i=0;i<=upto;i++){const v=arc[i],f=i/(N-1),l=1+0.05*Math.sin(Math.PI*f),p=this._proj([v[0]*l,v[1]*l,v[2]*l]);
+        for(let i=0;i<=upto;i++){const v=arc[i],f=i/(N-1),l=1+0.09*Math.sin(Math.PI*f),p=this._proj([v[0]*l,v[1]*l,v[2]*l]);
           if(p.z>0.02){if(!started){c.moveTo(p.x,p.y);started=true;}else c.lineTo(p.x,p.y);}else started=false;}
         c.stroke();
-        if(ar<1){const v=arc[upto],f=upto/(N-1),l=1+0.05*Math.sin(Math.PI*f),p=this._proj([v[0]*l,v[1]*l,v[2]*l]);
+        if(ar<1){const v=arc[upto],f=upto/(N-1),l=1+0.09*Math.sin(Math.PI*f),p=this._proj([v[0]*l,v[1]*l,v[2]*l]);
           if(p.z>0.02){c.globalAlpha=1;c.beginPath();c.arc(p.x,p.y,2.6,0,7);c.fillStyle="#fff";c.fill();c.beginPath();c.arc(p.x,p.y,6.5,0,7);c.strokeStyle="#E89A3C";c.globalAlpha=.5;c.lineWidth=1.2;c.stroke();}}
       }
       c.globalAlpha=1; c.shadowBlur=0;
@@ -461,20 +471,36 @@ class Globe{
         c.globalAlpha=1;
       }
     }
-    // city nodes
-    for(const h of this.hubVecs){const p=this._proj(h.v);if(p.z>0.1){c.beginPath();c.arc(p.x,p.y,2,0,7);c.fillStyle="rgba(245,240,231,.82)";c.fill();}}
-    // country labels (faint)
+    // city nodes — Iranian origins subtle, destination cities glow amber (many distinct arrivals)
+    for(const h of this.hubVecs){const p=this._proj(h.v);if(p.z<=0.1)continue;
+      if(NET_ORIGINS.has(h.k)){c.beginPath();c.arc(p.x,p.y,h.k==="tehran"?2.6:1.5,0,7);c.fillStyle="rgba(245,240,231,.68)";c.fill();}
+      else{c.shadowColor="#E89A3C";c.shadowBlur=8;c.beginPath();c.arc(p.x,p.y,3,0,7);c.fillStyle="#F2B45E";c.fill();c.shadowBlur=0;
+        c.beginPath();c.arc(p.x,p.y,1.2,0,7);c.fillStyle="#fff";c.fill();}}
+    // country labels (faint, behind everything)
     c.textBaseline="middle"; c.textAlign="center"; c.font="9px 'IBM Plex Mono',monospace";
-    for(const [la,lo,txt] of REGIONS){const p=this._proj(toVec(la,lo));if(p.z>0.25){c.fillStyle="rgba(143,178,190,.38)";c.fillText(txt,p.x,p.y);}}
-    // hub labels
-    c.textAlign="left"; c.font="10px 'IBM Plex Mono',monospace";
-    for(const k in NET_LABEL){const p=this._proj(toVec(HUBS[k][0],HUBS[k][1]));if(p.z>0.2){c.fillStyle="rgba(245,240,231,.9)";c.fillText(NET_LABEL[k],p.x+6,p.y-6);}}
+    for(const [la,lo,txt] of REGIONS){const p=this._proj(toVec(la,lo));if(p.z>0.25){c.fillStyle="rgba(143,178,190,.30)";c.fillText(txt,p.x,p.y);}}
+    // hub labels — collision-aware, pushed outward from the globe centre so they never stack
+    c.font="10px 'IBM Plex Mono',monospace"; c.textBaseline="middle";
+    const cand=[];
+    for(const k in NET_LABEL){const p=this._proj(toVec(HUBS[k][0],HUBS[k][1]));if(p.z<=0.2)continue;
+      cand.push({p,txt:NET_LABEL[k],pr:(k==="tehran"?3:(NET_ORIGINS.has(k)?1:2))});}
+    cand.sort((a,b)=>b.pr-a.pr||b.p.z-a.p.z);      // destinations + front-facing first
+    const placed=[];
+    for(const it of cand){const p=it.p, right=p.x>=this.cx;
+      c.textAlign=right?"left":"right";
+      const lx=p.x+(right?8:-8), ly=p.y-7, w=c.measureText(it.txt).width;
+      const x1=(right?lx:lx-w)-3, x2=(right?lx+w:lx)+3, rect={x1,y1:ly-8,x2,y2:ly+8};
+      if(placed.some(q=>!(rect.x2<q.x1||rect.x1>q.x2||rect.y2<q.y1||rect.y1>q.y2)))continue;
+      placed.push(rect);
+      c.fillStyle=it.pr===2?"rgba(245,240,231,.95)":"rgba(245,240,231,.72)"; c.fillText(it.txt,lx,ly);}
   }
 }
 
 /* ---------- route explorer binding ---------- */
 function initRouteExplorer(globe){
   let cur="rail";
+  const map=document.querySelector(".routemap");
+  const highlight=id=>{ if(globe)globe.flyRoute(id); if(map)map.setAttribute("data-active",id); };
   window.__refreshRoute=function(){
     const R=ROUTE_KEYS[cur];
     const set=(id,k)=>{const el=document.getElementById(id);if(el)el.textContent=tr(k);};
@@ -482,9 +508,10 @@ function initRouteExplorer(globe){
     document.querySelectorAll(".route-tabs button").forEach(b=>b.classList.toggle("on",b.dataset.route===cur));
   };
   document.querySelectorAll(".route-tabs button").forEach(b=>b.addEventListener("click",()=>{
-    cur=b.dataset.route; if(globe)globe.flyRoute(cur); window.__refreshRoute();
+    cur=b.dataset.route; highlight(cur); window.__refreshRoute();
   }));
   if(globe)globe.setActive("rail");
+  highlight("rail");
   window.__refreshRoute();
 }
 
@@ -625,55 +652,159 @@ const LOGO='<svg class="mark" viewBox="0 0 30 30" fill="none" aria-hidden="true"
 function initLogo(){document.querySelectorAll(".brand .mark").forEach(el=>{el.outerHTML=LOGO;});}
 
 /* ---------- cargo listings ---------- */
+let LISTINGS=[];
+function imgsOf(it){ if(Array.isArray(it.images)) return it.images.filter(Boolean);
+  if(it.images) return String(it.images).split(",").map(s=>s.trim()).filter(Boolean);
+  return it.image?[it.image]:[]; }
 function initListings(){
   const grid=document.getElementById("listings"); if(!grid) return;
-  let items=LISTINGS_SEED.slice(), filter="all";
+  let filter="all"; LISTINGS=LISTINGS_SEED.slice();
   const nm=it=>it[LANG]||it.ru||it.en||it.name||"";
   function render(){
     grid.innerHTML="";
-    items.filter(it=>filter==="all"||it.dir===filter).forEach(it=>{
+    const shown=LISTINGS.filter(it=>filter==="all"||it.dir===filter);
+    const c=document.getElementById("lst-count"); if(c)c.textContent=shown.length;
+    if(!shown.length){ grid.innerHTML='<div class="news-note">'+tr("lst_empty")+'</div>'; return; }
+    shown.forEach(it=>{
       const card=document.createElement("a"); card.className="lcard";
       card.href="contact.html?cargo="+encodeURIComponent(nm(it));
       const dirLabel=(String(it.dir).indexOf("cis-iran")===0)?tr("d_cis"):tr("d_iran");
-      card.innerHTML=
-        '<div class="lc-top"><span class="lc-dir">'+dirLabel+'</span>'+(it.barter?'<span class="lc-barter">◆ '+tr("out_barter")+'</span>':'')+'</div>'+
-        '<div class="lc-name">'+nm(it)+'</div>'+
-        '<div class="lc-meta"><span><b>HS</b> '+(it.hs||"—")+'</span><span><b>'+tr("lst_origin")+'</b> '+(it.origin||"—")+'</span><span><b>'+tr("lst_moq")+'</b> '+(it.moq||"—")+'</span></div>'+
-        '<div class="lc-cta">'+tr("lst_enquire")+' →</div>';
+      const imgs=imgsOf(it);
+      const photo=imgs.length?'<div class="lc-img"><img src="'+escHtml(imgs[0])+'" alt="" loading="lazy" onerror="this.closest(\'.lc-img\').remove()">'+(imgs.length>1?'<span class="lc-imgn">+'+(imgs.length-1)+'</span>':'')+'</div>':'';
+      const pending=it._pending?'<span class="lc-pending">'+tr("ac_pending")+'</span>':'';
+      const meta=[
+        it.weight?'<span><b>'+tr("ac_weight")+'</b> '+escHtml(it.weight)+'</span>':'',
+        it.hs?'<span><b>HS</b> '+escHtml(it.hs)+'</span>':'',
+        '<span><b>'+tr("lst_origin")+'</b> '+escHtml(it.origin||"—")+'</span>',
+        it.moq?'<span><b>'+tr("lst_moq")+'</b> '+escHtml(it.moq)+'</span>':''
+      ].join('');
+      card.innerHTML=photo+'<div class="lc-body">'+
+        '<div class="lc-top"><span class="lc-dir">'+dirLabel+'</span><span class="lc-badges">'+(it.barter?'<span class="lc-barter">◆ '+tr("out_barter")+'</span>':'')+pending+'</span></div>'+
+        '<div class="lc-name">'+escHtml(nm(it))+'</div>'+
+        (it.description?'<div class="lc-desc">'+escHtml(it.description)+'</div>':'')+
+        '<div class="lc-meta">'+meta+'</div>'+
+        '<div class="lc-cta">'+tr("lst_enquire")+' →</div></div>';
       grid.appendChild(card);
     });
-    const c=document.getElementById("lst-count"); if(c)c.textContent=items.filter(it=>filter==="all"||it.dir===filter).length;
   }
   document.querySelectorAll("[data-lfilter]").forEach(b=>b.addEventListener("click",()=>{
     filter=b.dataset.lfilter; document.querySelectorAll("[data-lfilter]").forEach(x=>x.classList.toggle("on",x===b)); render();
   }));
   window.__renderListings=render; render();
-  if(LISTINGS_ENDPOINT){ fetch(LISTINGS_ENDPOINT+"?type=listings").then(r=>r.json()).then(rows=>{ if(Array.isArray(rows)&&rows.length){ items=rows; render(); } }).catch(()=>{}); }
+  if(LISTINGS_ENDPOINT){ fetch(LISTINGS_ENDPOINT+"?type=listings").then(r=>r.json()).then(rows=>{ if(Array.isArray(rows)&&rows.length){ LISTINGS=rows; render(); } }).catch(()=>{}); }
+  initAddCargo(render);
+}
+
+/* ---------- add-cargo submission (public, moderated) ---------- */
+function downscale(file, max, quality){
+  return new Promise(res=>{
+    const img=new Image(), url=URL.createObjectURL(file);
+    img.onload=()=>{ URL.revokeObjectURL(url);
+      let w=img.width, h=img.height;
+      if(w>h && w>max){ h=Math.round(h*max/w); w=max; } else if(h>=w && h>max){ w=Math.round(w*max/h); h=max; }
+      const cv=document.createElement("canvas"); cv.width=w; cv.height=h;
+      cv.getContext("2d").drawImage(img,0,0,w,h);
+      res(cv.toDataURL("image/jpeg", quality||0.8));
+    };
+    img.onerror=()=>{ URL.revokeObjectURL(url); res(null); };
+    img.src=url;
+  });
+}
+function initAddCargo(render){
+  const modal=document.getElementById("cargoModal"); if(!modal) return;
+  const openBtn=document.getElementById("addCargoBtn");
+  const form=document.getElementById("cargoForm");
+  const fileInput=document.getElementById("cargoPhotos");
+  const previews=document.getElementById("acPreviews");
+  const msg=document.getElementById("acMsg");
+  let images=[];   // base64 data URLs, downscaled
+  const open=()=>{ modal.classList.add("on"); modal.setAttribute("aria-hidden","false"); document.body.style.overflow="hidden"; };
+  const close=()=>{ modal.classList.remove("on"); modal.setAttribute("aria-hidden","true"); document.body.style.overflow=""; };
+  if(openBtn) openBtn.addEventListener("click",open);
+  modal.querySelectorAll("[data-close]").forEach(el=>el.addEventListener("click",close));
+  document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&modal.classList.contains("on")) close(); });
+
+  fileInput.addEventListener("change", async ()=>{
+    const files=[...fileInput.files].slice(0,4);
+    previews.innerHTML=""; images=[];
+    for(const f of files){ const d=await downscale(f,1200,0.8); if(d){ images.push(d);
+      const im=document.createElement("div"); im.className="ac-thumb"; im.innerHTML='<img src="'+d+'" alt="">'; previews.appendChild(im); } }
+  });
+
+  form.addEventListener("submit", e=>{
+    e.preventDefault();
+    const fd=new FormData(form);
+    const cargo={ type:"cargo", dir:fd.get("dir")||"iran-cis", name:(fd.get("name")||"").trim(),
+      weight:(fd.get("weight")||"").trim(), origin:(fd.get("origin")||"").trim(), moq:(fd.get("moq")||"").trim(),
+      description:(fd.get("description")||"").trim(), barter:!!fd.get("barter"), images, lang:LANG };
+    if(!cargo.name){ return; }
+    const btn=form.querySelector('button[type="submit"]');
+    msg.className="ac-msg"; msg.textContent=tr("ac_sending"); if(btn) btn.disabled=true;
+    const done=ok=>{ if(btn) btn.disabled=false;
+      msg.className="ac-msg "+(ok?"ok":"err"); msg.textContent=tr(ok?"ac_ok":"ac_err");
+      if(ok){ // optimistic: show the submitter their card straight away, marked pending
+        LISTINGS.unshift({dir:cargo.dir,name:cargo.name,weight:cargo.weight,origin:cargo.origin,moq:cargo.moq,
+          description:cargo.description,barter:cargo.barter,images:cargo.images,_pending:true});
+        render(); form.reset(); previews.innerHTML=""; images=[];
+        setTimeout(close, 1400);
+      } };
+    if(LISTINGS_ENDPOINT){
+      fetch(LISTINGS_ENDPOINT,{method:"POST",body:JSON.stringify(cargo)})
+        .then(r=>r.json()).then(res=>done(res&&res.ok!==false)).catch(()=>done(false));
+    } else { done(true); }   // no backend yet → local preview so the flow is visible
+  });
 }
 
 /* ---------- live regional news ---------- */
+function escHtml(s){return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function newsDate(iso){ if(!iso) return ""; const loc=LANG==="ru"?"ru-RU":LANG==="fa"?"fa-IR":"en-GB";
+  try{ return new Date(iso).toLocaleDateString(loc,{day:"numeric",month:"short"}); }catch(e){ return ""; } }
+
+let NEWS_TIMER=null;
 function initNews(){
   const box=document.getElementById("news-grid"); if(!box) return;
+  const note=()=>{ if(!box.querySelector(".ncard")) box.innerHTML='<div class="news-note">'+tr("news_empty")+'</div>'; };
+
+  // Preferred path: our GNews proxy (real API, images, auto-refreshing).
+  if(NEWS_ENDPOINT){
+    const load=()=>{
+      fetch(NEWS_ENDPOINT+"?type=news&lang="+encodeURIComponent(LANG))
+        .then(r=>r.json())
+        .then(items=>{ if(Array.isArray(items)&&items.length) renderNews(box,items.slice(0,6)); else note(); })
+        .catch(note);
+    };
+    window.__newsReload=load;                 // re-fetch when the language changes
+    load();
+    if(NEWS_TIMER) clearInterval(NEWS_TIMER);
+    NEWS_TIMER=setInterval(()=>{ if(!document.hidden) load(); }, 300000);   // poll every 5 min
+    document.addEventListener("visibilitychange",()=>{ if(!document.hidden) load(); });
+    return;
+  }
+
+  // Fallback (no key yet): keyless Google-News RSS — headlines only, no images.
   const q='Iran Kazakhstan trade corridor OR logistics OR CIS';
   const rss='https://news.google.com/rss/search?q='+encodeURIComponent(q)+'&hl=en-US&gl=US&ceid=US:en';
   const url='https://api.allorigins.win/raw?url='+encodeURIComponent(rss);
-  const fail=()=>{ box.innerHTML='<div class="news-note">'+tr("news_empty")+'</div>'; };
   fetch(url).then(r=>r.text()).then(xml=>{
     const doc=new DOMParser().parseFromString(xml,"text/xml");
     const items=[].slice.call(doc.querySelectorAll("item")).slice(0,6);
-    if(!items.length){ fail(); return; }
-    const loc=LANG==="ru"?"ru-RU":LANG==="fa"?"fa-IR":"en-GB";
-    box.innerHTML="";
-    items.forEach(it=>{
+    if(!items.length){ note(); return; }
+    renderNews(box, items.map(it=>{
       const g=s=>{const el=it.querySelector(s);return el?el.textContent:"";};
-      const title=g("title").replace(/\s+-\s+[^-]+$/,"");
-      const src=g("source")||"News";
-      let d; try{d=new Date(g("pubDate")).toLocaleDateString(loc,{day:"numeric",month:"short"});}catch(e){d="";}
-      const a=document.createElement("a"); a.className="ncard"; a.href=g("link")||"#"; a.target="_blank"; a.rel="noopener";
-      a.innerHTML='<div class="nc-src">'+src+(d?' · '+d:'')+'</div><div class="nc-title">'+title+'</div><div class="nc-go">'+tr("news_more")+' ↗</div>';
-      box.appendChild(a);
-    });
-  }).catch(fail);
+      return {title:g("title").replace(/\s+-\s+[^-]+$/,""), source:g("source")||"News", url:g("link")||"#", date:g("pubDate"), image:""};
+    }));
+  }).catch(note);
+}
+function renderNews(box, items){
+  box.innerHTML="";
+  items.forEach(n=>{
+    const a=document.createElement("a"); a.className="ncard"; a.href=n.url||"#"; a.target="_blank"; a.rel="noopener";
+    const d=newsDate(n.date);
+    const img=n.image?'<div class="nc-img"><img src="'+escHtml(n.image)+'" alt="" loading="lazy" onerror="this.closest(\'.nc-img\').remove()"></div>':'';
+    a.innerHTML=img+'<div class="nc-body"><div class="nc-src">'+escHtml(n.source||"News")+(d?' · '+d:'')+'</div>'
+      +'<div class="nc-title">'+escHtml(n.title||"")+'</div><div class="nc-go">'+tr("news_more")+' ↗</div></div>';
+    box.appendChild(a);
+  });
 }
 
 function initHeroScroll(globe){
@@ -704,5 +835,6 @@ document.addEventListener("DOMContentLoaded",()=>{
   if(heroStage){ const hg=new Globe(heroStage,{zoom:1.4,center:[40,55],showModal:false,reveal:0,autoRotate:true,rotSpeed:0.0024}); initHeroScroll(hg); }
   const expStage=document.querySelector(".explorer .globe-stage");
   if(expStage){ const g=new Globe(expStage,{active:"rail",zoom:2.7,center:[40,53]}); initRouteExplorer(g); }
+  else if(document.querySelector(".routemap")){ initRouteExplorer(null); }
   initWizard(); initListings(); initNews();
 });

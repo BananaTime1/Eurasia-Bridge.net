@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Onest:wght@400;500;600;700;800&family=Vazirmatn:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=6">
+<link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
 <div class="curtain"><span></span><span></span><span></span><span></span><span></span><span></span></div>
@@ -55,7 +55,10 @@
         <button data-lfilter="iran-cis" data-i18n="d_iran">Iran → CIS</button>
         <button data-lfilter="cis-iran" data-i18n="d_cis">CIS → Iran</button>
       </div>
-      <div class="lst-count-wrap"><span id="lst-count">0</span> <span data-i18n="nav_cargo">Cargo</span></div>
+      <div class="lst-bar-right">
+        <div class="lst-count-wrap"><span id="lst-count">0</span> <span data-i18n="nav_cargo">Cargo</span></div>
+        <button id="addCargoBtn" class="btn btn-gold btn-addcargo" type="button"><span class="plus" aria-hidden="true">+</span> <span data-i18n="lst_add_btn">Add cargo</span></button>
+      </div>
     </div>
 
     <div id="listings" class="lgrid reveal"></div>
@@ -64,15 +67,51 @@
   </div>
 </section>
 
+<!-- ADD CARGO MODAL -->
+<div class="modal" id="cargoModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="cargoModalTitle">
+    <button class="modal-x" type="button" data-close aria-label="Close">✕</button>
+    <h3 id="cargoModalTitle" data-i18n="ac_title">Add cargo</h3>
+    <p class="modal-sub" data-i18n="ac_sub">Submit a lot to the corridor catalogue. It appears on the site once our team approves it.</p>
+    <form id="cargoForm" novalidate>
+      <label data-i18n="ac_dir">Direction</label>
+      <select name="dir">
+        <option value="iran-cis" data-i18n="d_iran">Iran → CIS</option>
+        <option value="cis-iran" data-i18n="d_cis">CIS → Iran</option>
+      </select>
+      <label data-i18n="ac_name">Cargo name</label>
+      <input name="name" required maxlength="80">
+      <div class="ac-grid">
+        <div><label data-i18n="ac_weight">Weight / volume</label><input name="weight" maxlength="40"></div>
+        <div><label data-i18n="ac_origin">Origin</label><input name="origin" maxlength="60"></div>
+      </div>
+      <div class="ac-grid">
+        <div><label data-i18n="ac_moq">Min. order (optional)</label><input name="moq" maxlength="40"></div>
+        <div class="ac-check"><label><input type="checkbox" name="barter"> <span data-i18n="ac_barter">Barter-eligible</span></label></div>
+      </div>
+      <label data-i18n="ac_desc">Description</label>
+      <textarea name="description" rows="3" maxlength="400"></textarea>
+      <label data-i18n="ac_photos">Photos <span class="ac-hint" data-i18n="ac_photos_hint">Up to 4 images.</span></label>
+      <input type="file" id="cargoPhotos" accept="image/*" multiple>
+      <div class="ac-previews" id="acPreviews"></div>
+      <div class="ac-actions">
+        <button type="submit" class="btn btn-gold" data-i18n="ac_submit">Submit for review</button>
+        <div class="ac-msg" id="acMsg" role="status" aria-live="polite"></div>
+      </div>
+    </form>
+  </div>
+</div>
+
 <footer><div class="wrap">
   <div class="foot-grid">
     <div class="foot-brand"><span data-i18n="brand">Eurasia Bridge</span><p data-i18n="f_tag">A trading & logistics intermediary on the Iran–Kazakhstan corridor.</p></div>
     <div class="foot-col"><h5 data-i18n="f_explore">Explore</h5><a href="index.html" data-i18n="nav_home">Home</a><a href="routes.html" data-i18n="nav_routes">Routes</a><a href="contact.html" data-i18n="nav_contact">Contact</a></div>
-    <div class="foot-col"><h5 data-i18n="f_reach">Reach us</h5><a href="mailto:enquiry@eurasia-bridge.kz">enquiry@eurasia-bridge.kz</a><a href="tel:+77000000000">+7 (700) 000-00-00</a><a href="contact.html">Aktau · Almaty · Tehran</a></div>
+    <div class="foot-col"><h5 data-i18n="f_reach">Reach us</h5><a href="mailto:enquiry@eurasia-bridge.net">enquiry@eurasia-bridge.net</a><a href="tel:+77000000000">+7 (700) 000-00-00</a><a href="contact.html">Aktau · Almaty · Tehran</a></div>
   </div>
   <div class="foot-bottom"><span data-i18n="f_rights">© 2026 Eurasia Bridge</span><span>EN · RU · FA · KZ</span></div>
 </div></footer>
 
-<script src="app.js?v=13"></script>
+<script src="app.js?v=21"></script>
 </body>
 </html>

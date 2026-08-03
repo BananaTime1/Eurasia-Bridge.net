@@ -31,18 +31,46 @@ Then you can host it **free** with **GitHub Pages**: repo → Settings → Pages
 Source: `main` / root. Your site goes live at `https://<username>.github.io/eurasia-bridge/`.
 Netlify also works — connect the repo and it redeploys on every push.
 
-## 3. Live regional news  🟡 next build
-Plan: a "News" section that pulls the latest headlines about Iran, Kazakhstan and the
-CIS trade corridor, auto-updating. Easiest reliable approach is free Google News RSS
-through a CORS proxy — note this only works on the **hosted** site (https), not a local
-file://. If you want a paid, higher-limit source (NewsAPI/GNews) I'll wire it to a key
-in `app.js` (`NEWS_KEY`). I'll build this next.
+## 3. Live regional news with photos  ✅ code ready
+The homepage "News" section shows the latest Iran / Kazakhstan / CIS corridor
+headlines **with a photo for each**, and refreshes itself automatically (re-checks
+every few minutes while the page is open). To switch it on:
 
-## 4. Cargo listings  🟡 next build
-The listings page (add/browse cargo offered on the corridor) is the next feature.
-Decision needed: should listings be **hard-coded by us** (simplest), or **editable by
-you from the same Google Sheet** (a "Listings" tab the site reads live)? The second is
-nicer for adding cargo yourself — tell me which and I'll build it.
+1. Get a **free** API key at **https://gnews.io** (sign up → copy your key).
+2. Open `google-sheet.gs` and paste it in:  `var GNEWS_API_KEY = "your-key";`
+   (The key lives here, on Google's servers — never in the website — so no one can
+   steal it from your page source.)
+3. Make sure `NEWS_ENDPOINT` in `app.js` is set to the **same** Web App URL as the
+   form (step 1 above). One deployment powers the form, the listings, and the news.
+
+That's it. Until a key is set, the section falls back to a free Google-News headline
+feed (no photos). Note: live news needs the **hosted** site (https), not a local file.
+GNews covers English and Russian; the Persian page shows the English feed.
+
+## 4. Cargo listings + "Add cargo"  ✅ code ready
+The Cargo page has an **"Add cargo"** button: anyone can submit a lot with photos,
+weight, description, direction and origin. Nothing appears publicly until **you
+approve it**, so there's no spam risk.
+
+How it works once the Apps Script (section 1) is deployed and `LISTINGS_ENDPOINT`
+in `app.js` is set to its Web App URL (same URL as the form):
+
+1. A visitor fills the "Add cargo" form. Photos are shrunk in their browser and sent
+   to your Apps Script, which saves them to a **"Eurasia Bridge Cargo"** folder in your
+   Google Drive and adds a row to the **"Listings"** sheet tab with **Status = pending**.
+2. **To publish a lot:** open the Listings tab and change its **Status** cell from
+   `pending` to `approved`. It now shows on the site (the page refreshes the list on
+   load). To hide one again, change Status back to anything else.
+3. Columns are created automatically on the first submission:
+   `Timestamp · Status · Dir · Name · Weight · Description · Origin · MOQ · Barter · Images · Lang`.
+
+The demo/placeholder cargo has been removed, so the page shows a clean "no cargo yet"
+message until your first approved lot.
+
+**Getting notified:** if you set `NOTIFY_EMAIL` (section 1 / step 6), you also get an
+email on every new cargo submission — with the details and a link straight to the sheet
+so you can review and approve it. The same setting emails you on every enquiry from the
+contact form. So one address = alerts for both inquiries and cargo posts.
 
 ---
 Languages: RU is default; EN/FA via the switcher. Accent: amber `#E89A3C`.
