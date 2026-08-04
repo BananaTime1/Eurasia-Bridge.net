@@ -277,6 +277,10 @@ const LISTINGS_ENDPOINT = "https://script.google.com/a/macros/eurasia-bridge.net
    the keyless Google-News headline feed (no images). See SETUP.md / google-sheet.gs. */
 const NEWS_ENDPOINT = "https://script.google.com/a/macros/eurasia-bridge.net/s/AKfycbyLHUwi9nzQ5BxZ1GtQDgun18HAKINHPANRhziBtEWBHLm0UjgIfksAZW1Hv5DvcyED/exec";
 
+/* Optional: your public Telegram username (no @) for the floating chat button.
+   e.g. "EurasiaBridge". Leave "" to hide the button. */
+const TELEGRAM = "";
+
 // Cleared of demo/placeholder cargo — real lots come from the connected Google
 // Sheet (Listings tab) via LISTINGS_ENDPOINT, added through the on-site "Add cargo"
 // flow. Empty array = the page shows a clean "no cargo yet" state until then.
@@ -839,5 +843,15 @@ document.addEventListener("DOMContentLoaded",()=>{
   const expStage=document.querySelector(".explorer .globe-stage");
   if(expStage){ const g=new Globe(expStage,{active:"rail",zoom:2.7,center:[40,53]}); initRouteExplorer(g); }
   else if(document.querySelector(".routemap")){ initRouteExplorer(null); }
-  initWizard(); initListings(); initNews();
+  initWizard(); initListings(); initNews(); initChatButton();
 });
+
+/* ---------- floating Telegram chat button ---------- */
+function initChatButton(){
+  if(typeof TELEGRAM==="undefined" || !TELEGRAM) return;
+  const a=document.createElement("a");
+  a.className="chat-fab"; a.href="https://t.me/"+String(TELEGRAM).replace(/^@/,"");
+  a.target="_blank"; a.rel="noopener"; a.setAttribute("aria-label","Telegram");
+  a.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#2a1e05" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>';
+  document.body.appendChild(a);
+}
