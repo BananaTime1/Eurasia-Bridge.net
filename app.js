@@ -72,7 +72,7 @@ const T = {
     ct_sub:"Send the endpoints, cargo, volume, and terms. You get one point of accountability instead of four separate conversations.",
     fld_company:"Company", fld_email:"Work email", fld_from:"Origin", fld_to:"Destination",
     fld_cargo:"Cargo & volume", fld_msg:"Anything else we should know",
-    ct_send:"Send enquiry", ct_note:"Demo form — connect it to your email or CRM before launch.",
+    ct_send:"Send enquiry", ct_note:"We reply within one business day.",
     p1b:"1 business day", p1t:"An indicative route quote back in your inbox.",
     p2b:"1 partner, not four", p2t:"Sourcing, transport, customs and payment on one line.",
     p3b:"Fixed checkpoints", p3t:"Status you can track, correct customs codes, FTA preference where it applies.",
@@ -155,7 +155,7 @@ const T = {
     ct_sub:"Пришлите точки, груз, объём и условия. Одна точка ответственности вместо четырёх разговоров.",
     fld_company:"Компания", fld_email:"Рабочая почта", fld_from:"Пункт отправления", fld_to:"Пункт назначения",
     fld_cargo:"Груз и объём", fld_msg:"Что ещё нам стоит знать",
-    ct_send:"Отправить заявку", ct_note:"Демо-форма — подключите к почте или CRM перед запуском.",
+    ct_send:"Отправить заявку", ct_note:"Отвечаем в течение одного рабочего дня.",
     p1b:"1 рабочий день", p1t:"Предварительный расчёт маршрута к вам на почту.",
     p2b:"1 партнёр, а не четыре", p2t:"Поиск, транспорт, таможня и платёж — на одной линии.",
     p3b:"Контрольные точки", p3t:"Статус под контролем, верные коды ТН ВЭД, преференции FTA где применимо.",
@@ -237,7 +237,7 @@ const T = {
     ct_sub:"نقاط مبدأ و مقصد، بار، حجم و شرایط را بفرستید. یک نقطه‌ی پاسخگویی به‌جای چهار گفتگوی جداگانه.",
     fld_company:"شرکت", fld_email:"ایمیل کاری", fld_from:"مبدأ", fld_to:"مقصد",
     fld_cargo:"بار و حجم", fld_msg:"چیز دیگری که باید بدانیم",
-    ct_send:"ارسال درخواست", ct_note:"فرم نمونه — پیش از انتشار به ایمیل یا CRM متصل شود.",
+    ct_send:"ارسال درخواست", ct_note:"ظرف یک روز کاری پاسخ می‌دهیم.",
     p1b:"۱ روز کاری", p1t:"برآورد اولیه‌ی مسیر در ایمیل شما.",
     p2b:"۱ شریک، نه چهار تا", p2t:"تأمین، حمل، گمرک و پرداخت روی یک خط.",
     p3b:"ایست‌های ثابت", p3t:"وضعیتِ قابل پیگیری، کدهای گمرکی درست، ترجیح FTA در صورت امکان.",
@@ -634,6 +634,8 @@ function initContactForm(){
   try{const cg=new URLSearchParams(location.search).get("cargo"); if(cg){const cf=form.querySelector("#c-cargo"); if(cf&&!cf.value) cf.value=cg;}}catch(e){}
   form.addEventListener("submit",e=>{
     e.preventDefault();
+    const hp=form.querySelector("#c-website");
+    if(hp&&hp.value){ form.innerHTML='<div class="enq-success"><div class="ok-check">✓</div><h3>'+tr("ct_ok_t")+'</h3><p>'+tr("ct_ok_p")+'</p></div>'; return; }  // bot trap
     let ok=true;
     [["#c-company",false],["#c-email",true],["#c-cargo",false]].forEach(([sel,isEmail])=>{
       const f=form.querySelector(sel); if(!f)return;
@@ -734,6 +736,7 @@ function initAddCargo(render){
   form.addEventListener("submit", e=>{
     e.preventDefault();
     const fd=new FormData(form);
+    if(fd.get("website")){ msg.className="ac-msg ok"; msg.textContent=tr("ac_ok"); setTimeout(close,1200); return; }  // bot trap
     const cargo={ type:"cargo", dir:fd.get("dir")||"iran-cis", name:(fd.get("name")||"").trim(),
       weight:(fd.get("weight")||"").trim(), origin:(fd.get("origin")||"").trim(), moq:(fd.get("moq")||"").trim(),
       description:(fd.get("description")||"").trim(), barter:!!fd.get("barter"), images, lang:LANG };

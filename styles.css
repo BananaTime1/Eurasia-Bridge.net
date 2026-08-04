@@ -365,6 +365,12 @@ footer{border-top:1px solid var(--hair);padding:56px 0 40px;background:var(--bla
 .wz-result .foot-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;margin-top:28px;border-top:1px solid var(--hair);padding-top:22px}
 .barter-flag{font-family:var(--mono);font-size:13px;color:var(--gold)}
 @media(max-width:640px){.tl-row{grid-template-columns:120px 1fr 60px;gap:10px}.tl-row .ph small{display:none}}
+.wz-field{margin-bottom:24px}
+.wz-field label{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:12px}
+.wz-field input[type=range]{width:100%;accent-color:var(--gold);cursor:pointer}
+.wz-field output{display:inline-block;margin-top:10px;font-family:var(--sans);font-size:22px;font-weight:700;color:var(--gold-2)}
+.wz-field select{width:100%;background:var(--black);border:1px solid var(--hair);border-radius:12px;color:var(--paper);font-family:var(--sans);font-size:15px;padding:12px 14px}
+.wz-field select:focus{outline:none;border-color:var(--gold)}
 
 /* ============ Direction B: video hero ============ */
 .vhero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
@@ -452,6 +458,7 @@ body.lang-fa .lc-name{font-family:var(--fa)}
 .ac-actions{display:flex;align-items:center;gap:14px;margin-top:22px;flex-wrap:wrap}
 .ac-msg{font-family:var(--mono);font-size:12px}
 .ac-msg.ok{color:#7fcf9f}.ac-msg.err{color:#e58a7c}
+.hp{position:absolute!important;left:-9999px!important;top:auto;width:1px;height:1px;overflow:hidden}
 @media(max-width:520px){.ac-grid{grid-template-columns:1fr}.ac-check label{margin-top:0}}
 
 /* ============ news ============ */

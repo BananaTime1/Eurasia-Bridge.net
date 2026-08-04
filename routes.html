@@ -10,11 +10,16 @@
 <meta property="og:description" content="Eurasia Bridge — trade & logistics intermediary on the Iran–Kazakhstan corridor: sourcing, transport, customs, payment and barter, from supplier to shelf.">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://eurasia-bridge.net/routes.html">
+<link rel="canonical" href="https://eurasia-bridge.net/routes.html">
+<meta property="og:image" content="https://eurasia-bridge.net/media/og-image.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://eurasia-bridge.net/media/og-image.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%230C0A08%22%2F%3E%3Cpath%20d%3D%22M5%2021%20C11%2021%2012%2010%2016%2010%20C20%2010%2021%2021%2027%2021%22%20stroke%3D%22%23E89A3C%22%20stroke-width%3D%222.4%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2210%22%20r%3D%222.6%22%20fill%3D%22%23E89A3C%22%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Onest:wght@400;500;600;700;800&family=Vazirmatn:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=9">
+<link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
 <div class="curtain"><span></span><span></span><span></span><span></span><span></span><span></span></div>
@@ -77,6 +82,101 @@
   </div>
 </div></section>
 
+<!-- ROUTE CALCULATOR -->
+<section class="band" id="calculator"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow" data-i18n="calc_eyebrow">Route calculator</div>
+    <h2 data-i18n="calc_title">Estimate your route and transit in seconds.</h2>
+    <p data-i18n="calc_sub">Indicative only — the real number comes back within one business day once our team confirms the lane.</p>
+  </div>
+
+  <div class="wizard reveal" id="wiz">
+    <div class="wz-prog"><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div></div>
+
+    <div class="wz-panel on" data-step="1">
+      <div class="wz-count">01 / 04</div>
+      <h3 class="wz-q" data-i18n="q_dir">Which way is the cargo moving?</h3>
+      <div class="opt-grid">
+        <button type="button" class="opt on" data-field="dir" data-val="iran-cis"><b data-i18n="d_iran">Iran → CIS</b><span data-i18n="dir1_p">Nine product groups into Kazakhstan and the wider CIS.</span></button>
+        <button type="button" class="opt" data-field="dir" data-val="cis-iran"><b data-i18n="d_cis">CIS → Iran</b><span data-i18n="dir2_p">Matched to what the Iranian side actually demands.</span></button>
+      </div>
+    </div>
+
+    <div class="wz-panel" data-step="2">
+      <div class="wz-count">02 / 04</div>
+      <h3 class="wz-q" data-i18n="q_cargo">What are you shipping?</h3>
+      <div class="opt-grid">
+        <button type="button" class="opt on" data-field="cargo" data-val="c_food"><b data-i18n="c_food">Food</b></button>
+        <button type="button" class="opt" data-field="cargo" data-val="c_produce"><b data-i18n="c_produce">Fresh produce</b></button>
+        <button type="button" class="opt" data-field="cargo" data-val="c_poly"><b data-i18n="c_poly">Polymers &amp; petro</b></button>
+        <button type="button" class="opt" data-field="cargo" data-val="c_bitumen"><b data-i18n="c_bitumen">Bitumen &amp; petroleum</b></button>
+        <button type="button" class="opt" data-field="cargo" data-val="c_construction"><b data-i18n="c_construction">Construction materials</b></button>
+        <button type="button" class="opt" data-field="cargo" data-val="c_carpets"><b data-i18n="c_carpets">Carpets &amp; home</b></button>
+        <button type="button" class="opt" data-field="cargo" data-val="c_cosmetics"><b data-i18n="c_cosmetics">Cosmetics &amp; personal care</b></button>
+        <button type="button" class="opt" data-field="cargo" data-val="c_grain"><b data-i18n="c_grain">Grain &amp; pulses</b></button>
+        <button type="button" class="opt" data-field="cargo" data-val="c_oils"><b data-i18n="c_oils">Vegetable oils</b></button>
+        <button type="button" class="opt" data-field="cargo" data-val="c_metal"><b data-i18n="c_metal">Rolled metal</b></button>
+        <button type="button" class="opt" data-field="cargo" data-val="c_timber"><b data-i18n="c_timber">Timber</b></button>
+        <button type="button" class="opt" data-field="cargo" data-val="c_fert"><b data-i18n="c_fert">Chemicals &amp; fertilisers</b></button>
+      </div>
+    </div>
+
+    <div class="wz-panel" data-step="3">
+      <div class="wz-count">03 / 04</div>
+      <h3 class="wz-q" data-i18n="q_vol">How much, and on what terms?</h3>
+      <div class="wz-field">
+        <label data-i18n="f_volume">Volume</label>
+        <input type="range" id="w-vol" min="20" max="1000" step="10" value="120" aria-label="Volume">
+        <output id="w-vol-out">120 t</output>
+      </div>
+      <div class="wz-field">
+        <label data-i18n="f_incoterm">Incoterm</label>
+        <select id="w-incoterm">
+          <option value="EXW">EXW</option><option value="FCA">FCA</option>
+          <option value="CPT" selected>CPT</option><option value="DAP">DAP</option><option value="CIF">CIF</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="wz-panel" data-step="4">
+      <div class="wz-count">04 / 04</div>
+      <h3 class="wz-q" data-i18n="q_route">Any route preference?</h3>
+      <div class="opt-grid">
+        <button type="button" class="opt on" data-field="pref" data-val="auto"><b data-i18n="rp_auto">Recommend for me</b></button>
+        <button type="button" class="opt" data-field="pref" data-val="rail"><b data-i18n="rp_rail">Rail</b></button>
+        <button type="button" class="opt" data-field="pref" data-val="ferry"><b data-i18n="rp_ferry">Ferry</b></button>
+        <button type="button" class="opt" data-field="pref" data-val="road"><b data-i18n="rp_road">Road</b></button>
+      </div>
+    </div>
+
+    <div class="wz-result" id="wz-result">
+      <div class="res-head">
+        <div class="res-route">
+          <div class="rec-label" data-i18n="res_rec">Recommended route</div>
+          <div class="rec-route" id="o-route">—</div>
+          <div class="rec-mode" id="o-mode">—</div>
+        </div>
+        <div class="res-total">
+          <div class="bignum"><span id="o-days">0</span> <small data-i18n="res_days">days</small></div>
+          <div class="rng" id="o-range">—</div>
+        </div>
+      </div>
+      <div class="timeline" id="timeline"></div>
+      <div class="foot-row">
+        <div class="barter-flag" id="o-barter">—</div>
+        <a class="btn btn-gold" href="contact.html" data-i18n="calc_cta">Turn this into a real quote</a>
+      </div>
+    </div>
+
+    <div class="wz-nav">
+      <button type="button" class="btn btn-ghost" id="wz-back" disabled data-i18n="wz_back">Back</button>
+      <button type="button" class="btn btn-gold" id="wz-next" data-i18n="wz_next">Next</button>
+    </div>
+  </div>
+
+  <p class="lst-note" data-i18n="calc_disc" style="max-width:660px;margin-inline:auto">Indicative estimate, not a binding offer.</p>
+</div></section>
+
 <!-- SERVICES -->
 <section class="band" style="background:linear-gradient(180deg,transparent,rgba(232,154,60,.03),transparent)"><div class="wrap">
   <div class="sec-head reveal">
@@ -116,6 +216,6 @@
 </div></footer>
 
 <script src="geo.js?v=1"></script>
-<script src="app.js?v=21"></script>
+<script src="app.js?v=22"></script>
 </body>
 </html>
