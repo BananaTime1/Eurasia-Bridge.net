@@ -792,6 +792,12 @@ function initNews(){
 
   // Preferred path: our GNews proxy (real API, images, auto-refreshing).
   if(NEWS_ENDPOINT){
+    const show=(items)=>{
+      items=(items||[]).filter(a=>a&&a.title);
+      if(!items.length){ note(); return; }
+      items.sort((a,b)=>(b.image?1:0)-(a.image?1:0));   // photos first so the grid never looks half-empty
+      renderNews(box, items.slice(0,6));
+    };
     const load=()=>{
       fetch(NEWS_ENDPOINT+"?type=news&lang="+encodeURIComponent(LANG))
         .then(r=>r.json())
@@ -799,13 +805,13 @@ function initNews(){
           items=Array.isArray(items)?items:[];
           // If a non-English feed is thin (limited regional coverage), top it up with
           // English headlines so the section is never emptier than the English page.
-          if(items.length>=6 || LANG==="en"){ items.length?renderNews(box,items.slice(0,6)):note(); return; }
+          if(items.length>=6 || LANG==="en"){ show(items); return; }
           fetch(NEWS_ENDPOINT+"?type=news&lang=en").then(r=>r.json()).then(en=>{
             en=Array.isArray(en)?en:[];
             const seen=new Set(items.map(a=>a.url));
             en.forEach(a=>{ if(a.url&&!seen.has(a.url)){ items.push(a); seen.add(a.url); } });
-            items.length?renderNews(box,items.slice(0,6)):note();
-          }).catch(()=>{ items.length?renderNews(box,items.slice(0,6)):note(); });
+            show(items);
+          }).catch(()=>show(items));
         })
         .catch(note);
     };
