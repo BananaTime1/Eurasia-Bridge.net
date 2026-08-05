@@ -795,7 +795,18 @@ function initNews(){
     const load=()=>{
       fetch(NEWS_ENDPOINT+"?type=news&lang="+encodeURIComponent(LANG))
         .then(r=>r.json())
-        .then(items=>{ if(Array.isArray(items)&&items.length) renderNews(box,items.slice(0,6)); else note(); })
+        .then(items=>{
+          items=Array.isArray(items)?items:[];
+          // If a non-English feed is thin (limited regional coverage), top it up with
+          // English headlines so the section is never emptier than the English page.
+          if(items.length>=6 || LANG==="en"){ items.length?renderNews(box,items.slice(0,6)):note(); return; }
+          fetch(NEWS_ENDPOINT+"?type=news&lang=en").then(r=>r.json()).then(en=>{
+            en=Array.isArray(en)?en:[];
+            const seen=new Set(items.map(a=>a.url));
+            en.forEach(a=>{ if(a.url&&!seen.has(a.url)){ items.push(a); seen.add(a.url); } });
+            items.length?renderNews(box,items.slice(0,6)):note();
+          }).catch(()=>{ items.length?renderNews(box,items.slice(0,6)):note(); });
+        })
         .catch(note);
     };
     window.__newsReload=load;                 // re-fetch when the language changes
