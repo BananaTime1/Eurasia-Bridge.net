@@ -78,7 +78,7 @@ const T = {
     p3b:"Fixed checkpoints", p3t:"Status you can track, correct customs codes, FTA preference where it applies.",
     /* footer */
     f_tag:"A trading & logistics operator on the Iran–Kazakhstan corridor. Based in Kazakhstan and Iran; Russian and English, with Persian for Iranian counterparties.",
-    f_explore:"Explore", f_reach:"Reach us", f_rights:"© 2026 Eurasia Bridge", f_privacy:"Privacy", sub_h:"Corridor updates", sub_ph:"Your email", sub_btn:"Subscribe", sub_ok:"Thanks — you're on the list.", sub_bad:"Enter a valid email.",
+    f_explore:"Explore", f_reach:"Reach us", f_rights:"© 2026 Eurasia Bridge", f_privacy:"Privacy", sub_h:"Corridor updates", sub_ph:"Your email", sub_btn:"Subscribe", sub_ok:"Thanks — you're on the list.", sub_bad:"Enter a valid email.", wa_msg:"Hello! I'm writing from the Eurasia Bridge website.",
     cta_ready:"Ready to move cargo across the corridor?",
     cta_ready_sub:"Start with one stage or the whole deal. We'll come back with a route and a plan.",
     wz_step:"Step", wz_of:"of", wz_next:"Next", wz_back:"Back", wz_calc:"See the timeline", wz_restart:"Start over",
@@ -166,7 +166,7 @@ const T = {
     p2b:"1 партнёр, а не четыре", p2t:"Поиск, транспорт, таможня и платёж — на одной линии.",
     p3b:"Контрольные точки", p3t:"Статус под контролем, верные коды ТН ВЭД, преференции FTA где применимо.",
     f_tag:"Торгово-логистический оператор на коридоре Иран–Казахстан. База в Казахстане и Иране; русский и английский, персидский — для иранских контрагентов.",
-    f_explore:"Разделы", f_reach:"Связаться", f_rights:"© 2026 Евразия Мост", f_privacy:"Конфиденциальность", sub_h:"Новости коридора", sub_ph:"Ваш e-mail", sub_btn:"Подписаться", sub_ok:"Спасибо — вы подписаны.", sub_bad:"Введите корректный e-mail.",
+    f_explore:"Разделы", f_reach:"Связаться", f_rights:"© 2026 Евразия Мост", f_privacy:"Конфиденциальность", sub_h:"Новости коридора", sub_ph:"Ваш e-mail", sub_btn:"Подписаться", sub_ok:"Спасибо — вы подписаны.", sub_bad:"Введите корректный e-mail.", wa_msg:"Здравствуйте! Пишу с сайта Eurasia Bridge.",
     cta_ready:"Готовы везти груз через коридор?",
     cta_ready_sub:"Начните с одного этапа или всей сделки. Мы вернёмся с маршрутом и планом.",
     wz_step:"Шаг", wz_of:"из", wz_next:"Далее", wz_back:"Назад", wz_calc:"Показать сроки", wz_restart:"Заново",
@@ -254,7 +254,7 @@ const T = {
     p2b:"۱ شریک، نه چهار تا", p2t:"تأمین، حمل، گمرک و پرداخت روی یک خط.",
     p3b:"ایست‌های ثابت", p3t:"وضعیتِ قابل پیگیری، کدهای گمرکی درست، ترجیح FTA در صورت امکان.",
     f_tag:"اپراتور تجاری و لجستیکی در کریدور ایران–قزاقستان. مستقر در قزاقستان و ایران؛ روسی و انگلیسی، و فارسی برای طرف‌های ایرانی.",
-    f_explore:"کاوش", f_reach:"تماس با ما", f_rights:"© ۲۰۲۶ پل اوراسیا", f_privacy:"حریم خصوصی", sub_h:"اخبار کریدور", sub_ph:"ایمیل شما", sub_btn:"عضویت", sub_ok:"سپاس — شما عضو شدید.", sub_bad:"یک ایمیل معتبر وارد کنید.",
+    f_explore:"کاوش", f_reach:"تماس با ما", f_rights:"© ۲۰۲۶ پل اوراسیا", f_privacy:"حریم خصوصی", sub_h:"اخبار کریدور", sub_ph:"ایمیل شما", sub_btn:"عضویت", sub_ok:"سپاس — شما عضو شدید.", sub_bad:"یک ایمیل معتبر وارد کنید.", wa_msg:"سلام! از وب‌سایت پل اوراسیا پیام می‌دهم.",
     cta_ready:"آماده‌ی جابه‌جایی بار در کریدور هستید؟",
     cta_ready_sub:"با یک مرحله یا کل معامله شروع کنید. با یک مسیر و یک برنامه برمی‌گردیم.",
     wz_step:"مرحله", wz_of:"از", wz_next:"بعدی", wz_back:"قبلی", wz_calc:"نمایش زمان‌بندی", wz_restart:"از نو",
@@ -295,8 +295,10 @@ const LISTINGS_ENDPOINT = "https://script.google.com/a/macros/eurasia-bridge.net
    the keyless Google-News headline feed (no images). See SETUP.md / google-sheet.gs. */
 const NEWS_ENDPOINT = "https://script.google.com/a/macros/eurasia-bridge.net/s/AKfycbyLHUwi9nzQ5BxZ1GtQDgun18HAKINHPANRhziBtEWBHLm0UjgIfksAZW1Hv5DvcyED/exec";
 
-/* Optional: your public Telegram username (no @) for the floating chat button.
-   e.g. "EurasiaBridge". Leave "" to hide the button. */
+/* Floating chat button. Set WHATSAPP to the full number in international format,
+   digits only (no +, spaces or dashes). Leave "" to hide. Falls back to TELEGRAM
+   (public username, no @) if WhatsApp is empty. */
+const WHATSAPP = "989390975921";
 const TELEGRAM = "";
 
 // Cleared of demo/placeholder cargo — real lots come from the connected Google
@@ -322,6 +324,8 @@ function applyLang(l){
     el.placeholder = (T[l] && T[l][k]!=null) ? T[l][k] : (T.en[k]!=null?T.en[k]:k);
   });
   document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on", b.dataset.lang===l));
+  const waFab=document.querySelector(".chat-fab[aria-label='WhatsApp']");
+  if(waFab && typeof WHATSAPP!=="undefined" && WHATSAPP){ waFab.href="https://wa.me/"+String(WHATSAPP).replace(/[^0-9]/g,"")+"?text="+encodeURIComponent(tr("wa_msg")); }
   if(window.__refreshRoute) window.__refreshRoute();
   if(window.__recalc) window.__recalc();
   if(window.__renderListings) window.__renderListings();
@@ -905,11 +909,18 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 /* ---------- floating Telegram chat button ---------- */
+const WA_SVG='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#2a1e05" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.15 1.6 5.96L2 22l4.25-1.68c1.74.95 3.71 1.45 5.71 1.45h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2zm5.7 14.02c-.24.68-1.4 1.29-1.93 1.37-.49.07-1.11.1-1.79-.11-.41-.13-.94-.31-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.54-1.16-2.94s.73-2.09.99-2.37c.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.28-.12.55.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.11.07.66-.17 1.34z"/></svg>';
+const TG_SVG='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#2a1e05" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>';
 function initChatButton(){
-  if(typeof TELEGRAM==="undefined" || !TELEGRAM) return;
   const a=document.createElement("a");
-  a.className="chat-fab"; a.href="https://t.me/"+String(TELEGRAM).replace(/^@/,"");
-  a.target="_blank"; a.rel="noopener"; a.setAttribute("aria-label","Telegram");
-  a.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#2a1e05" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>';
+  a.className="chat-fab"; a.target="_blank"; a.rel="noopener";
+  if(typeof WHATSAPP!=="undefined" && WHATSAPP){
+    const num=String(WHATSAPP).replace(/[^0-9]/g,"");
+    a.href="https://wa.me/"+num+"?text="+encodeURIComponent(tr("wa_msg"));
+    a.setAttribute("aria-label","WhatsApp"); a.innerHTML=WA_SVG;
+  } else if(typeof TELEGRAM!=="undefined" && TELEGRAM){
+    a.href="https://t.me/"+String(TELEGRAM).replace(/^@/,"");
+    a.setAttribute("aria-label","Telegram"); a.innerHTML=TG_SVG;
+  } else { return; }
   document.body.appendChild(a);
 }
