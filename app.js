@@ -78,7 +78,7 @@ const T = {
     p3b:"Fixed checkpoints", p3t:"Status you can track, correct customs codes, FTA preference where it applies.",
     /* footer */
     f_tag:"A trading & logistics operator on the Iran–Kazakhstan corridor. Based in Kazakhstan and Iran; Russian and English, with Persian for Iranian counterparties.",
-    f_explore:"Explore", f_reach:"Reach us", f_rights:"© 2026 Eurasia Bridge", f_privacy:"Privacy",
+    f_explore:"Explore", f_reach:"Reach us", f_rights:"© 2026 Eurasia Bridge", f_privacy:"Privacy", sub_h:"Corridor updates", sub_ph:"Your email", sub_btn:"Subscribe", sub_ok:"Thanks — you're on the list.", sub_bad:"Enter a valid email.",
     cta_ready:"Ready to move cargo across the corridor?",
     cta_ready_sub:"Start with one stage or the whole deal. We'll come back with a route and a plan.",
     wz_step:"Step", wz_of:"of", wz_next:"Next", wz_back:"Back", wz_calc:"See the timeline", wz_restart:"Start over",
@@ -166,7 +166,7 @@ const T = {
     p2b:"1 партнёр, а не четыре", p2t:"Поиск, транспорт, таможня и платёж — на одной линии.",
     p3b:"Контрольные точки", p3t:"Статус под контролем, верные коды ТН ВЭД, преференции FTA где применимо.",
     f_tag:"Торгово-логистический оператор на коридоре Иран–Казахстан. База в Казахстане и Иране; русский и английский, персидский — для иранских контрагентов.",
-    f_explore:"Разделы", f_reach:"Связаться", f_rights:"© 2026 Евразия Мост", f_privacy:"Конфиденциальность",
+    f_explore:"Разделы", f_reach:"Связаться", f_rights:"© 2026 Евразия Мост", f_privacy:"Конфиденциальность", sub_h:"Новости коридора", sub_ph:"Ваш e-mail", sub_btn:"Подписаться", sub_ok:"Спасибо — вы подписаны.", sub_bad:"Введите корректный e-mail.",
     cta_ready:"Готовы везти груз через коридор?",
     cta_ready_sub:"Начните с одного этапа или всей сделки. Мы вернёмся с маршрутом и планом.",
     wz_step:"Шаг", wz_of:"из", wz_next:"Далее", wz_back:"Назад", wz_calc:"Показать сроки", wz_restart:"Заново",
@@ -254,7 +254,7 @@ const T = {
     p2b:"۱ شریک، نه چهار تا", p2t:"تأمین، حمل، گمرک و پرداخت روی یک خط.",
     p3b:"ایست‌های ثابت", p3t:"وضعیتِ قابل پیگیری، کدهای گمرکی درست، ترجیح FTA در صورت امکان.",
     f_tag:"اپراتور تجاری و لجستیکی در کریدور ایران–قزاقستان. مستقر در قزاقستان و ایران؛ روسی و انگلیسی، و فارسی برای طرف‌های ایرانی.",
-    f_explore:"کاوش", f_reach:"تماس با ما", f_rights:"© ۲۰۲۶ پل اوراسیا", f_privacy:"حریم خصوصی",
+    f_explore:"کاوش", f_reach:"تماس با ما", f_rights:"© ۲۰۲۶ پل اوراسیا", f_privacy:"حریم خصوصی", sub_h:"اخبار کریدور", sub_ph:"ایمیل شما", sub_btn:"عضویت", sub_ok:"سپاس — شما عضو شدید.", sub_bad:"یک ایمیل معتبر وارد کنید.",
     cta_ready:"آماده‌ی جابه‌جایی بار در کریدور هستید؟",
     cta_ready_sub:"با یک مرحله یا کل معامله شروع کنید. با یک مسیر و یک برنامه برمی‌گردیم.",
     wz_step:"مرحله", wz_of:"از", wz_next:"بعدی", wz_back:"قبلی", wz_calc:"نمایش زمان‌بندی", wz_restart:"از نو",
@@ -316,6 +316,10 @@ function applyLang(l){
     const k = el.getAttribute("data-i18n");
     if(T[l] && T[l][k]!=null) el.textContent = T[l][k];
     else if(T.en[k]!=null) el.textContent = T.en[k];
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{
+    const k = el.getAttribute("data-i18n-ph");
+    el.placeholder = (T[l] && T[l][k]!=null) ? T[l][k] : (T.en[k]!=null?T.en[k]:k);
   });
   document.querySelectorAll(".langsw button").forEach(b=>b.classList.toggle("on", b.dataset.lang===l));
   if(window.__refreshRoute) window.__refreshRoute();
@@ -672,6 +676,25 @@ function initContactForm(){
   });
 }
 
+/* ---------- footer newsletter signup ---------- */
+function initSubscribe(){
+  document.querySelectorAll(".foot-sub").forEach(form=>{
+    const input=form.querySelector("input[type=email]");
+    const note=form.querySelector(".foot-sub-note");
+    form.addEventListener("submit",e=>{
+      e.preventDefault();
+      const hp=form.querySelector(".hp"); if(hp&&hp.value) return;   // bot trap
+      const email=(input&&input.value||"").trim();
+      const ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if(!ok){ if(note){note.textContent=tr("sub_bad");note.classList.add("bad");note.hidden=false;} if(input)input.style.borderColor="#c0603a"; return; }
+      if(input)input.style.borderColor="";
+      const data={type:"subscribe",email:email,lang:LANG,ts:new Date().toISOString()};
+      if(SHEET_ENDPOINT){ fetch(SHEET_ENDPOINT,{method:"POST",body:JSON.stringify(data)}).catch(()=>{}); }
+      form.innerHTML='<p class="foot-sub-ok">'+tr("sub_ok")+'</p>';
+    });
+  });
+}
+
 const LOGO='<svg class="mark" viewBox="0 0 30 30" fill="none" aria-hidden="true"><circle cx="15" cy="15" r="13.4" stroke="#E89A3C" stroke-opacity=".28" stroke-width="1.1"/><path d="M4.5 19.6 C10 19.6 11 8.4 15 8.4 C19 8.4 20 19.6 25.5 19.6" stroke="#E89A3C" stroke-width="2" stroke-linecap="round"/><path d="M6.6 19.6 C11 19.6 12.6 13.4 15 13.4 C17.4 13.4 19 19.6 23.4 19.6" stroke="#E89A3C" stroke-opacity=".45" stroke-width="1.35" stroke-linecap="round"/><circle cx="15" cy="8.4" r="2.5" fill="#E89A3C"/></svg>';
 function initLogo(){document.querySelectorAll(".brand .mark").forEach(el=>{el.outerHTML=LOGO;});}
 
@@ -870,7 +893,7 @@ function initHeroScroll(globe){
 
 document.addEventListener("DOMContentLoaded",()=>{
   applyLang(LANG); initLogo(); initMobileNav();
-  initLangSwitch(); initTransitions(); initReveals(); initNavHide(); initCursor(); initContactForm();
+  initLangSwitch(); initTransitions(); initReveals(); initNavHide(); initCursor(); initContactForm(); initSubscribe();
   const netStage=document.querySelector(".network .globe-stage");
   if(netStage){ new Globe(netStage,{zoom:1.5,center:[40,55],showModal:false,reveal:1,autoRotate:true,rotSpeed:0.0024}); }
   const heroStage=document.querySelector(".hero-globe .globe-stage");

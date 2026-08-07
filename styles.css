@@ -285,6 +285,18 @@ footer{border-top:1px solid var(--hair);padding:56px 0 40px;background:var(--bla
 .foot-col a{display:block;color:var(--paper);font-size:15px;padding:6px 0;transition:color .2s}
 .foot-col a:hover{color:var(--gold)}
 .foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:44px;padding-top:24px;border-top:1px solid var(--hair);font-family:var(--mono);font-size:12px;color:var(--grey-2);letter-spacing:.05em}
+.foot-sub{margin-top:22px;max-width:34ch;font-weight:400}
+.foot-sub label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin:0 0 10px}
+.foot-sub-row{display:flex;gap:8px}
+.foot-sub input[type=email]{flex:1;min-width:0;background:var(--black);border:1px solid var(--hair);border-radius:8px;padding:11px 12px;color:var(--paper);font:inherit;font-size:14px}
+.foot-sub input[type=email]:focus{outline:none;border-color:var(--gold)}
+.foot-sub button{background:var(--gold);color:#1a1206;border:none;border-radius:8px;padding:11px 16px;font:inherit;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:filter .2s}
+.foot-sub button:hover{filter:brightness(1.08)}
+.foot-sub .hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.foot-sub-note{margin:8px 0 0;font-size:13px;color:var(--grey)}
+.foot-sub-note.bad{color:#d67a52}
+.foot-sub-ok{margin:22px 0 0;font-size:14px;color:var(--gold);max-width:34ch}
+[dir=rtl] .foot-sub label{letter-spacing:0}
 @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}.foot-brand{grid-column:1/-1}}
 
 /* RTL niceties */
