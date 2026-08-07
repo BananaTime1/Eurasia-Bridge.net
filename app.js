@@ -817,11 +817,31 @@ function initNews(){
   const box=document.getElementById("news-grid"); if(!box) return;
   const note=()=>{ if(!box.querySelector(".ncard")) box.innerHTML='<div class="news-note">'+tr("news_empty")+'</div>'; };
 
-  // Preferred path: our GNews proxy (real API, images, auto-refreshing).
+  // Keyless Google-News RSS — headlines only, no images. Used both when there is
+  // no GNews key AND as a fallback whenever the GNews proxy is empty or errors,
+  // so the section is never blank. Query + locale follow the active language.
+  const loadRss=()=>{
+    const q=(LANG==="ru")?'Иран Казахстан торговля OR логистика OR коридор':'Iran Kazakhstan trade corridor OR logistics OR CIS';
+    const hl=(LANG==="ru")?'ru':'en-US', gl=(LANG==="ru")?'RU':'US', ceid=(LANG==="ru")?'RU:ru':'US:en';
+    const rss='https://news.google.com/rss/search?q='+encodeURIComponent(q)+'&hl='+hl+'&gl='+gl+'&ceid='+ceid;
+    const url='https://api.allorigins.win/raw?url='+encodeURIComponent(rss);
+    fetch(url).then(r=>r.text()).then(xml=>{
+      const doc=new DOMParser().parseFromString(xml,"text/xml");
+      const items=[].slice.call(doc.querySelectorAll("item")).slice(0,6);
+      if(!items.length){ note(); return; }
+      renderNews(box, items.map(it=>{
+        const g=s=>{const el=it.querySelector(s);return el?el.textContent:"";};
+        return {title:g("title").replace(/\s+-\s+[^-]+$/,""), source:g("source")||"News", url:g("link")||"#", date:g("pubDate"), image:""};
+      }));
+    }).catch(note);
+  };
+
+  // Preferred path: our GNews proxy (real API, images, auto-refreshing). Falls
+  // back to RSS if it is unset, errors, or returns an empty feed.
   if(NEWS_ENDPOINT){
     const show=(items)=>{
       items=(items||[]).filter(a=>a&&a.title);
-      if(!items.length){ note(); return; }
+      if(!items.length){ loadRss(); return; }   // GNews empty (quota/no results) → RSS
       items.sort((a,b)=>(b.image?1:0)-(a.image?1:0));   // photos first so the grid never looks half-empty
       renderNews(box, items.slice(0,6));
     };
@@ -840,29 +860,18 @@ function initNews(){
             show(items);
           }).catch(()=>show(items));
         })
-        .catch(note);
+        .catch(loadRss);   // proxy unreachable → RSS
     };
     window.__newsReload=load;                 // re-fetch when the language changes
     load();
     if(NEWS_TIMER) clearInterval(NEWS_TIMER);
-    NEWS_TIMER=setInterval(()=>{ if(!document.hidden) load(); }, 300000);   // poll every 5 min
+    NEWS_TIMER=setInterval(()=>{ if(!document.hidden) load(); }, 900000);   // poll every 15 min
     document.addEventListener("visibilitychange",()=>{ if(!document.hidden) load(); });
     return;
   }
 
-  // Fallback (no key yet): keyless Google-News RSS — headlines only, no images.
-  const q='Iran Kazakhstan trade corridor OR logistics OR CIS';
-  const rss='https://news.google.com/rss/search?q='+encodeURIComponent(q)+'&hl=en-US&gl=US&ceid=US:en';
-  const url='https://api.allorigins.win/raw?url='+encodeURIComponent(rss);
-  fetch(url).then(r=>r.text()).then(xml=>{
-    const doc=new DOMParser().parseFromString(xml,"text/xml");
-    const items=[].slice.call(doc.querySelectorAll("item")).slice(0,6);
-    if(!items.length){ note(); return; }
-    renderNews(box, items.map(it=>{
-      const g=s=>{const el=it.querySelector(s);return el?el.textContent:"";};
-      return {title:g("title").replace(/\s+-\s+[^-]+$/,""), source:g("source")||"News", url:g("link")||"#", date:g("pubDate"), image:""};
-    }));
-  }).catch(note);
+  window.__newsReload=loadRss;   // RSS-only mode still refreshes on language change
+  loadRss();
 }
 function renderNews(box, items){
   box.innerHTML="";
