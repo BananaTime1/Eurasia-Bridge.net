@@ -897,8 +897,9 @@ function renderNews(box, items){
     const a=document.createElement("a"); a.className="ncard"; a.href=n.url||"#"; a.target="_blank"; a.rel="noopener";
     const d=newsDate(n.date);
     const img=n.image?'<div class="nc-img"><img src="'+escHtml(n.image)+'" alt="" loading="lazy" onerror="this.closest(\'.nc-img\').remove()"></div>':'';
+    let t=(n.title||""); if(n.source){const suf=" - "+n.source; if(t.length>suf.length && t.slice(-suf.length)===suf) t=t.slice(0,-suf.length);}  // drop Google-News " - Source" suffix
     a.innerHTML=img+'<div class="nc-body"><div class="nc-src">'+escHtml(n.source||"News")+(d?' · '+d:'')+'</div>'
-      +'<div class="nc-title">'+escHtml(n.title||"")+'</div><div class="nc-go">'+tr("news_more")+' ↗</div></div>';
+      +'<div class="nc-title">'+escHtml(t)+'</div><div class="nc-go">'+tr("news_more")+' ↗</div></div>';
     box.appendChild(a);
   });
 }
