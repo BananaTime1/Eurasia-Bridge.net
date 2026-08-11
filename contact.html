@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Onest:wght@400;500;600;700;800&family=Vazirmatn:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=13">
+<link rel="stylesheet" href="styles.css?v=14">
 </head>
 <body>
 <div class="curtain"><span></span><span></span><span></span><span></span><span></span><span></span></div>
@@ -51,6 +51,7 @@
     <div class="eyebrow" data-i18n="ct_eyebrow">Start an enquiry</div>
     <h2 data-i18n="ct_title">A route quote within one business day.</h2>
     <p data-i18n="ct_sub">Send the endpoints, cargo, volume, and terms. You get one point of accountability instead of four separate conversations.</p>
+    <p class="human-line" data-i18n="human_line">You deal with a person, not a portal — message us and you're talking to us directly, usually within the hour.</p>
   </div>
 
   <div class="enq">
@@ -72,6 +73,15 @@
       <div class="promise-row"><div class="n">01</div><div class="t"><b data-i18n="p1b">1 business day</b><span data-i18n="p1t">An indicative route quote back in your inbox.</span></div></div>
       <div class="promise-row"><div class="n">02</div><div class="t"><b data-i18n="p2b">1 partner, not four</b><span data-i18n="p2t">Sourcing, transport, customs and payment on one line.</span></div></div>
       <div class="promise-row"><div class="n">03</div><div class="t"><b data-i18n="p3b">Fixed checkpoints</b><span data-i18n="p3t">Status you can track, correct customs codes, FTA preference where it applies.</span></div></div>
+      <form class="callback">
+        <div class="cb-h" data-i18n="cb_h">Prefer a call?</div>
+        <p class="cb-sub" data-i18n="cb_sub">Leave your number and we'll call you back — usually within the hour.</p>
+        <input type="text" id="cb-name" data-ph="cb_name" placeholder="Your name" autocomplete="name">
+        <input type="tel" id="cb-phone" data-ph="cb_phone" placeholder="Phone / WhatsApp" autocomplete="tel">
+        <input type="text" id="cb-time" data-ph="cb_time" placeholder="Best time to call (optional)">
+        <input type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-line" type="submit" data-i18n="cb_btn">Request a callback</button>
+      </form>
     </div>
   </div>
 </div></section>
@@ -85,7 +95,7 @@
   <div class="foot-bottom"><span data-i18n="f_rights">© 2026 Eurasia Bridge</span><span><a href="privacy.html" data-i18n="f_privacy">Privacy</a> · EN · RU · FA · KZ</span></div>
 </div></footer>
 
-<script src="app.js?v=30"></script>
+<script src="app.js?v=31"></script>
 <script>
   // translate placeholders
   (function(){

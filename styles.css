@@ -266,6 +266,19 @@ input[type=range]{flex:1;accent-color:var(--gold);height:4px}
 .enq-side .promise-row .t{font-size:15px}
 .enq-side .promise-row .t b{display:block;font-weight:600}
 .enq-side .promise-row .t span{color:var(--grey);font-size:13px}
+.human-line{color:var(--gold-2);font-weight:600;font-size:clamp(15px,1.7vw,18px);margin-top:1.05em;max-width:56ch}
+.hero-human{font-size:14.5px;font-weight:500;margin-top:20px;max-width:48ch;color:var(--paper);opacity:.9}
+.callback{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+.callback .cb-h{font-weight:700;font-size:17px;color:var(--paper)}
+.callback .cb-sub{color:var(--grey);font-size:14px;margin:0 0 4px}
+.callback input{width:100%;font-family:inherit;font-size:15px;color:var(--paper);background:var(--black-2);border:1px solid var(--hair);border-radius:12px;padding:13px 15px}
+.callback input:focus{outline:none;border-color:var(--gold)}
+.callback .hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.callback .btn-line{width:100%;justify-content:center;margin-top:4px}
+.btn-line{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.btn-line:hover{background:var(--gold);color:#2a1e05;transform:translateY(-1px)}
+.cb-ok{color:var(--gold);font-weight:600;font-size:15px;padding:10px 0}
+[dir=rtl] .callback input{text-align:right}
 @media(max-width:880px){.enq{grid-template-columns:1fr}}
 
 /* ============ CTA band ============ */
