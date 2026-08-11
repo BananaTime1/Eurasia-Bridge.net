@@ -860,7 +860,7 @@ function initNews(){
     const show=(items)=>{
       items=(items||[]).filter(a=>a&&a.title);
       if(!items.length){ loadRss(); return; }   // GNews empty (quota/no results) → RSS
-      items.sort((a,b)=>(b.image?1:0)-(a.image?1:0));   // photos first so the grid never looks half-empty
+      items.sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));   // newest first
       renderNews(box, items.slice(0,6));
     };
     const load=()=>{
