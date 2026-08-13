@@ -7,7 +7,7 @@ const T = {
     nav_home:"Home", nav_routes:"Routes", nav_calc:"Calculator", nav_contact:"Contact",
     cta_quote:"Get a route quote",
     /* home hero */
-    h_eyebrow:"The Iran ⇄ Kazakhstan trade corridor",
+    h_eyebrow:"The Iran–Kazakhstan logistics corridor",
     h_l1:"One partner,", h_l2:"from the supplier", h_l3:"to the shelf.",
     h_sub:"We run the whole transaction across the corridor — sourcing, transport, customs, payment, and barter — and put your goods on the shelf.",
     h_cta1:"Open the route calculator", h_cta2:"Explore the routes",
@@ -101,7 +101,7 @@ const T = {
     brand:"Евразия Мост",
     nav_home:"Главная", nav_routes:"Маршруты", nav_calc:"Калькулятор", nav_contact:"Контакты",
     cta_quote:"Запросить расчёт",
-    h_eyebrow:"Торговый коридор Иран ⇄ Казахстан",
+    h_eyebrow:"Логистический коридор Иран–Казахстан",
     h_l1:"Один партнёр —", h_l2:"от поставщика", h_l3:"до полки.",
     h_sub:"Мы ведём всю сделку по коридору — поиск поставщика, транспорт, таможня, платежи и бартер — и ставим ваш товар на полку.",
     h_cta1:"Открыть калькулятор", h_cta2:"Смотреть маршруты",
@@ -189,7 +189,7 @@ const T = {
     brand:"پل اوراسیا",
     nav_home:"خانه", nav_routes:"مسیرها", nav_calc:"محاسبه‌گر", nav_contact:"تماس",
     cta_quote:"استعلام مسیر",
-    h_eyebrow:"کریدور تجاری ایران ⇄ قزاقستان",
+    h_eyebrow:"کریدور لجستیک ایران–قزاقستان",
     h_l1:"یک شریک،", h_l2:"از تأمین‌کننده", h_l3:"تا قفسه فروشگاه.",
     h_sub:"ما کل معامله را در طول کریدور مدیریت می‌کنیم — تأمین، حمل‌ونقل، گمرک، پرداخت و تهاتر — و کالای شما را روی قفسه می‌گذاریم.",
     h_cta1:"باز کردن محاسبه‌گر مسیر", h_cta2:"کاوش مسیرها",
@@ -372,7 +372,7 @@ class Globe{
     this.stage=stage; this.opts=opts;
     this.canvas=document.createElement("canvas"); stage.appendChild(this.canvas);
     this.canvas.setAttribute("role","img");
-    this.canvas.setAttribute("aria-label", opts.aria||"Interactive map of the Iran–Kazakhstan trade corridor and the network of city routes across the CIS.");
+    this.canvas.setAttribute("aria-label", opts.aria||"Interactive map of the Iran–Kazakhstan logistics corridor and the network of city routes across the CIS.");
     this.ctx=this.canvas.getContext("2d");
     this.reduced=window.matchMedia("(prefers-reduced-motion:reduce)").matches;
     const cc=opts.center||[43,58]; const home=centerOn(toVec(cc[0],cc[1])); this.homeSpin=home.s; this.homeTilt=home.t;
