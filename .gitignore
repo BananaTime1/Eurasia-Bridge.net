@@ -6,3 +6,6 @@ Thumbs.db
 HANDOFF.md
 google-sheet.gs
 tools/
+
+# Internal backend mirror — Campaign.gs (server-side Apps Script, never published)
+campaign.gs
